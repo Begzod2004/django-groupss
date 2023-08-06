@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Company, Category, Product, ProductRating, CompanyProduct, TypeProduct
+from .models import Company, Category, Product, ProductRating, CompanyProduct, SubCategory
 from parler.admin import TranslatableAdmin
 
 
@@ -25,6 +25,10 @@ class CategoryAdmin(TranslatableAdmin):
             'fields': ('name',),
         }),
     )
+
+
+
+
 
 admin.site.register(Category, CategoryAdmin)
 
@@ -76,20 +80,60 @@ class CompanyAdmin(TranslatableAdmin):
     readonly_fields = ['created_at']
 
 
-admin.site.register(Company, CompanyAdmin)
 
 
-class TypeProductAdmin(TranslatableAdmin):
-    list_display = ['name', 'is_active']
+class SubCategoryAdmin(TranslatableAdmin):
+    list_display = ['name', 'category', 'is_active']
     list_display_links = ['name']
-    search_fields = ['translations__name']  # Search by translated name
+    search_fields = ['name', 'category__name']
+    list_filter = ['category', 'is_active']
     list_per_page = 20
-    list_filter = ['is_active']
 
     fieldsets = (
         (None, {
-            'fields': ('name', 'is_active'),
+            'fields': ('name', 'category', 'is_active'),
         }),
     )
 
-admin.site.register(TypeProduct, TypeProductAdmin)
+admin.site.register(SubCategory, SubCategoryAdmin)
+admin.site.register(Company, CompanyAdmin)
+
+
+# class TypeProductAdmin(TranslatableAdmin):
+#     list_display = ['name', 'is_active']
+#     list_display_links = ['name']
+#     search_fields = ['translations__name']  # Search by translated name
+#     list_per_page = 20
+#     list_filter = ['is_active']
+
+#     fieldsets = (
+#         (None, {
+#             'fields': ('name', 'is_active'),
+#         }),
+#     )
+
+# admin.site.register(TypeProduct, TypeProductAdmin)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,20 @@ from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 from parler.models import TranslatableModel, TranslatedFields
 
-class TypeProduct(TranslatableModel):
+# class TypeProduct(TranslatableModel):
+#     translations = TranslatedFields(
+#         name=models.CharField(max_length=255, verbose_name=_('Name')),
+#     )
+#     is_active = models.BooleanField(default=True)
+
+#     def __str__(self):
+#         return self.name
+
+#     class Meta:
+#         verbose_name = _('Tur kategoryasi')
+#         verbose_name_plural = _('Tur kategoryalari')
+
+class Category(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=255, verbose_name=_('Name')),
     )
@@ -14,15 +27,15 @@ class TypeProduct(TranslatableModel):
         return self.name
 
     class Meta:
-        verbose_name = _('Tur kategoryasi')
-        verbose_name_plural = _('Tur kategoryalari')
+        verbose_name = _('Category')
+        verbose_name_plural = _('Categories')
 
 class Company(TranslatableModel):
     translations = TranslatedFields(
         description = models.TextField(verbose_name=_('Qisqacha malumot'), help_text=_('Qisqacha malumot')),
     )
     name=models.CharField(max_length=300, verbose_name=_('Nomi'))
-    type_product = models.ForeignKey(TypeProduct ,on_delete=models.CASCADE,  verbose_name=_('Maxsulot turi'))
+    type_product = models.ForeignKey(Category ,on_delete=models.CASCADE,  verbose_name=_('Maxsulot turi'))
     location = models.CharField(max_length=255,null=True, blank=True)
     image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))
     phone_number = PhoneNumberField(verbose_name=_('Phone number'))
@@ -39,18 +52,20 @@ class Company(TranslatableModel):
         verbose_name = _('Kamapania')
         verbose_name_plural = _('Kampaniyalar')
 
-class Category(TranslatableModel):
+
+class SubCategory(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=255, verbose_name=_('Name')),
     )
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name=_('Parent Category'))
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name = _('Category')
-        verbose_name_plural = _('Categories')
+        verbose_name = _('Subcategory')
+        verbose_name_plural = _('Subcategories')
 
 
 class Product(TranslatableModel):
