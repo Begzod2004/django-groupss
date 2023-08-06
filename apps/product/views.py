@@ -1,13 +1,10 @@
 
 from requests import Response
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
 from .serializers import CompanySerializer, ProductSerializer, ProductRatingSerializer, ProductRetrieveSerializer
 from .models import Company, Product, ProductRating
 from .filters import ProductFilter
-
-
-from rest_framework import viewsets
-from rest_framework.decorators import action
+from rest_framework.filters import SearchFilter
 from .models import Category
 from .serializers import CategorySerializer
 
@@ -15,7 +12,6 @@ class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     http_method_names = ['get', 'head', 'options']
-    lookup_field = 'slug'
 
     # Add any additional custom actions or methods related to the Category model here
 
@@ -24,6 +20,9 @@ class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     http_method_names = ['get', 'head', 'options']
     filterset_class = ProductFilter
+    filter_backends = [SearchFilter]
+    search_fields = ['translations__name'] # Add this line
+    ordering_fields = ['created_at', 'name', 'type_product']
 
     def get_serializer_class(self):
         if self.action == 'retrieve':
@@ -43,12 +42,12 @@ class ProductViewSet(viewsets.ModelViewSet):
 class CompanyViewSet(viewsets.ModelViewSet):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
+    filter_backends = [SearchFilter]
+    search_fields = ['translations__name'] # Add this line
 
 class ProductRatingViewSet(viewsets.ModelViewSet):
     queryset = ProductRating.objects.all()
     serializer_class = ProductRatingSerializer
 
-class ProductViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+
 

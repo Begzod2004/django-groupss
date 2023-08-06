@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     # 'apps.home',
     # 'apps.account',
     'apps.product',
+    'apps.blog',
 
 ]
 
@@ -147,6 +148,14 @@ import os, dj_database_url
 DATABASES = {
     'default': dj_database_url.parse(env('DATABASE_URL'))
     }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'mydatabase',
+#     }
+# }
 
 
 # Password validation

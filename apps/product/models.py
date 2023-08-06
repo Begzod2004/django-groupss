@@ -1,32 +1,43 @@
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from phonenumber_field.modelfields import PhoneNumberField
 from parler.models import TranslatableModel, TranslatedFields
 
-
-class Company(TranslatableModel):
+class TypeProduct(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=255, verbose_name=_('Name')),
-        description=models.TextField(blank=False, null=False, verbose_name=_('Description'))
     )
-    type_product = models.CharField(max_length=100)
-    count_product = models.PositiveIntegerField()
-    phone_number = models.CharField(max_length=20)
-    found_date = models.DateField()
-    rating_stars = models.FloatField(validators=[MinValueValidator(0.0), MaxValueValidator(5.0)])
-    facebook = models.URLField(blank=True, null=True)
-    instagram = models.URLField(blank=True, null=True)
-    telegram = models.URLField(blank=True, null=True)
-    youtube = models.URLField(blank=True, null=True)
-
-    class Meta:
-        verbose_name = _('Company')
-        verbose_name_plural = _('Companies')
-        ordering = ["-rating_stars", "translations__name"]
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = _('Tur kategoryasi')
+        verbose_name_plural = _('Tur kategoryalari')
+
+class Company(TranslatableModel):
+    translations = TranslatedFields(
+        description = models.TextField(verbose_name=_('Qisqacha malumot'), help_text=_('Qisqacha malumot')),
+    )
+    name=models.CharField(max_length=300, verbose_name=_('Nomi'))
+    type_product = models.ForeignKey(TypeProduct ,on_delete=models.CASCADE,  verbose_name=_('Maxsulot turi'))
+    location = models.CharField(max_length=255,null=True, blank=True)
+    image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))
+    phone_number = PhoneNumberField(verbose_name=_('Phone number'))
+    created_at = models.DateTimeField(auto_now_add=True)
+    facebook = models.URLField(verbose_name=_('Instagram URL'))
+    instagram = models.URLField(verbose_name=_('Instagram URL'))
+    telegram = models.URLField(verbose_name=_('Telegram URL'))
+    youtube = models.URLField(verbose_name=_('Youtube URL'))
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = _('Kamapania')
+        verbose_name_plural = _('Kampaniyalar')
 
 class Category(TranslatableModel):
     translations = TranslatedFields(
@@ -46,14 +57,13 @@ class Product(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=300, verbose_name=_('Nomi')),
         compound = models.CharField(max_length=1000, verbose_name=_('maxsulot haqida')),
-        tag = models.TextField(verbose_name=_('Maqola')),
+        tag = models.TextField(verbose_name=_('Tag')),
     )
     category = models.ForeignKey(Category,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))
     image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))
     created_at = models.DateTimeField(verbose_name=_('Created at'))
     updated_at = models.DateTimeField(verbose_name=_('Updated at'))
     is_featured = models.BooleanField(default=False, verbose_name=_('Maxus post'))
-    slug = models.SlugField(max_length=255, verbose_name=_('Slug'))
     views = models.IntegerField(default=0, verbose_name=_('Ko\'rilganlar soni'))
 
     def __str__(self):
@@ -75,7 +85,6 @@ class ProductRating(models.Model):
     class Meta:
         verbose_name = _('Product Rating')
         verbose_name_plural = _('Product Ratings')
-        ordering = ["-rating_stars"]
 
     def __str__(self):
         return f"{self.product.name} - {self.rating_stars} stars"

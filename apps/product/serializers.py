@@ -2,7 +2,7 @@ from rest_framework import serializers
 from parler_rest.serializers import TranslatableModelSerializer
 from parler_rest.fields import TranslatedFieldsField
 from .models import Company, Product, ProductRating, CompanyProduct, Category
-
+from rest_framework import serializers
 
 class CategorySerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Category)

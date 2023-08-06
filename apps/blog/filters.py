@@ -1,14 +1,15 @@
 from django_filters import rest_framework as filters
-from .models import Product, Category
+from apps.blog.models import Post, Category
 import datetime
 
 
-class ProductFilter(filters.FilterSet):
-    search = filters.CharFilter(field_name='translations__name', lookup_expr='icontains')
+class PostFilter(filters.FilterSet):
+    category = filters.CharFilter(field_name='categories__slug', lookup_expr='icontains', method='filter_category')
+    search = filters.CharFilter(field_name='translations__title', lookup_expr='icontains')
     popular = filters.BooleanFilter(field_name='views', method='filter_popular')
 
     class Meta:
-        model = Product
+        model = Post
         fields = ['category', 'search']
 
     def filter_category(self, queryset, name, value):

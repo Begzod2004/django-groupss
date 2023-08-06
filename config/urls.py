@@ -60,8 +60,8 @@ urlpatterns += [
 
 
     # local urls
-    path('product/', include('apps.product.urls')),
-    # path('contact/', include('apps.contact.api.urls')),
+    path('pr/', include('apps.product.urls')),
+    path('/', include('apps.blog.urls')),
     # path('order/', include('apps.order.api.urls')),
 
     # path('home/', include('home.urls'))
