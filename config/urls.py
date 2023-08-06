@@ -61,7 +61,7 @@ urlpatterns += [
 
     # local urls
     path('pr/', include('apps.product.urls')),
-    path('/', include('apps.blog.urls')),
+    path('b/', include('apps.blog.urls')),
     # path('order/', include('apps.order.api.urls')),
 
     # path('home/', include('home.urls'))
