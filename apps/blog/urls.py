@@ -4,8 +4,8 @@ from apps.blog.views import CategoryViewSet, PostViewSet
 
 router = DefaultRouter()
 
-router.register('categoriessss', CategoryViewSet, basename='categories')
-router.register('postssssss', PostViewSet, basename='posts')
+router.register('categories', CategoryViewSet, basename='categories')
+router.register('posts', PostViewSet, basename='posts')
 
 
 urlpatterns = [
