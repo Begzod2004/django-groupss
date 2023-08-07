@@ -34,7 +34,7 @@ admin.site.register(Category, CategoryAdmin)
 
 
 class ProductAdmin(TranslatableAdmin):
-    list_display = ['name', 'created_at', 'is_featured', 'views']
+    list_display = ['name', 'created_at', 'is_featured', 'views', 'campany']
     list_display_links = ['name']
     search_fields = ['name', 'compound', 'tag']
     list_per_page = 20
@@ -43,7 +43,7 @@ class ProductAdmin(TranslatableAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('name', 'compound', 'tag', 'category', 'image', 'is_featured', 'created_at', 'updated_at', 'views'),
+            'fields': ('name', 'compound', 'tag', 'campany', 'category', 'image', 'is_featured', 'created_at', 'updated_at', 'views'),
         },),
     )
     readonly_fields = ['views']

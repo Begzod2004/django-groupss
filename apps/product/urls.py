@@ -9,7 +9,6 @@ router.register(r'product-ratings', ProductRatingViewSet)
 router.register(r'category', CategoryViewSet)
 router.register(r'subcategory', SubCategoryViewSet)
 
-
 urlpatterns = [
     path('', include(router.urls)),
 ]

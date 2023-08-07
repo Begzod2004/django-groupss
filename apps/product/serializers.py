@@ -21,24 +21,28 @@ class SubCategorySerializer(TranslatableModelSerializer):
         fields = '__all__'
 
 
-
-class CompanySerializer(TranslatableModelSerializer):
-    translations = TranslatedFieldsField(shared_model=Company)
-
-    class Meta:
-        model = Company
-        fields = '__all__'
-                  
-
 class ProductSerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Product)
 
     class Meta:
         model = Product
         fields = '__all__'
+        
+class CompanySerializer(TranslatableModelSerializer):
+    translations = TranslatedFieldsField(shared_model=Company)
+    products = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Company
+        fields = '__all__'
+
+    def get_products(self, instance):
+        products = Product.objects.filter(campany=instance)  # Use "campany" instead of "company"
+        product_serializer = ProductSerializer(products, many=True)
+        return product_serializer.data
 
 
-
+                
 class ProductRatingSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductRating

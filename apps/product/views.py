@@ -47,7 +47,7 @@ class CompanyViewSet(viewsets.ModelViewSet):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
     filter_backends = [SearchFilter]
-    search_fields = ['translations__name'] # Add this line
+    search_fields = ['translations__name']
 
 class ProductRatingViewSet(viewsets.ModelViewSet):
     queryset = ProductRating.objects.all()

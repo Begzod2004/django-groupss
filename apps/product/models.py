@@ -21,6 +21,7 @@ class Category(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=255, verbose_name=_('Name')),
     )
+    image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
@@ -75,6 +76,7 @@ class Product(TranslatableModel):
         tag = models.TextField(verbose_name=_('Tag')),
     )
     category = models.ForeignKey(Category,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))
+    campany = models.ForeignKey(Company, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))
     created_at = models.DateTimeField(verbose_name=_('Created at'))
     updated_at = models.DateTimeField(verbose_name=_('Updated at'))

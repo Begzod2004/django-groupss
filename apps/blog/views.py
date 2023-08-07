@@ -3,8 +3,8 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import status
 from apps.blog.models import Category, Post
-from apps.blog.serializers import CategorySerializer, PostSerializer, PostRetrieveSerializer
-from apps.blog.filters import PostFilter
+from .serializers import CategorySerializer, PostSerializer, PostRetrieveSerializer
+from .filters import PostFilter
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
@@ -15,7 +15,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['get', 'head', 'options'])
     def posts(self, request, slug=None):
-        category = self.get_object()
+        category = self.get_object()    
         if not category:
             return Response(status=status.HTTP_404_NOT_FOUND)
         pagination = self.paginate_queryset(category.post_set.all())
