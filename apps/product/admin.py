@@ -17,20 +17,18 @@ class CompanyProductAdmin(admin.ModelAdmin):
 
 class CategoryAdmin(TranslatableAdmin):
     list_display = ['name']
-    list_display_links = ['name']
+    list_display_links = ['name',]
     search_fields = ['name']
     list_per_page = 20
     fieldsets = (
         (None, {
-            'fields': ('name',),
+            'fields': ('name', 'image'),
         }),
     )
 
-
-
-
-
 admin.site.register(Category, CategoryAdmin)
+
+
 
 
 class ProductAdmin(TranslatableAdmin):
