@@ -2,12 +2,19 @@ from django.contrib import admin
 from .models import Company, Category, Product, ProductRating, CompanyProduct, SubCategory
 from parler.admin import TranslatableAdmin
 
-
 @admin.register(ProductRating)
 class ProductRatingAdmin(admin.ModelAdmin):
-    list_display = ['product', 'rating_stars', 'name', 'email']
-    list_filter = ['rating_stars']
-    search_fields = ['product__name', 'name', 'email']
+    list_display = ['product', 'star', 'review_date', 'email']
+    list_filter = ['star']
+    search_fields = ['product__name', 'email']
+    list_per_page = 20
+
+    fieldsets = (
+        (None, {
+            'fields': ('product', 'star', 'review_comment', 'review_date', 'email'),
+        }),
+    )
+    readonly_fields = ['review_date']
 
 @admin.register(CompanyProduct)
 class CompanyProductAdmin(admin.ModelAdmin):

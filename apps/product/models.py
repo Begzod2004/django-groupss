@@ -93,10 +93,10 @@ class Product(TranslatableModel):
 
 
 class ProductRating(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='ratings')
-    rating_stars = models.FloatField(validators=[MinValueValidator(0.0), MaxValueValidator(5.0)])
-    comment = models.TextField()
-    name = models.CharField(max_length=100)
+    star = models.IntegerField(default=0 , verbose_name = "star")
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,related_name='productreview')
+    review_comment = models.TextField()
+    review_date = models.DateTimeField(auto_now_add=True, verbose_name='review_created_date')
     email = models.EmailField()
 
     class Meta:

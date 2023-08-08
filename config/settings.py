@@ -73,7 +73,7 @@ REST_FRAMEWORK = {
 }
 
 LOCAL_BASE_URL = 'http://127.0.0.1:8000'
-PROD_BASE_URL = 'http://localhost:3000'
+PROD_BASE_URL = 'http://localhost:5173'
 # PROD_BASE_URL = 'https://w4.citynet.uz:4441'
 
 MIDDLEWARE = [
@@ -102,10 +102,12 @@ PARLER_LANGUAGES = {
 
 
 
+
 # cors headers ->
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
+    "http://localhost:5173",  # Add this line
 ]
 
 CORS_ALLOW_METHODS = [
@@ -116,7 +118,10 @@ CORS_ALLOW_HEADERS = [
     '*'
 ]
 CORS_ALLOW_CREDENTIALS = True
-
+CSRF_TRUSTED_ORIGINS = [
+    "http://127.0.0.1:5173",
+    "http://localhost:5173",
+]
 # AUTH_USER_MODEL = 'account.Account'
 
 LOGIN_REDIRECT_URL = '/'
@@ -145,17 +150,17 @@ import os, dj_database_url
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.parse(env('DATABASE_URL'))
-    }
-
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'mydatabase',
+#     'default': dj_database_url.parse(env('DATABASE_URL'))
 #     }
-# }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
+}
 
 
 # Password validation

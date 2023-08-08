@@ -6,6 +6,8 @@ from .models import Company, Product, ProductRating, SubCategory
 from .filters import ProductFilter
 from rest_framework.filters import SearchFilter
 from .models import Category
+from django.db.models import F
+
 from .serializers import CategorySerializer
 
 class CategoryViewSet(viewsets.ModelViewSet):
@@ -50,7 +52,7 @@ class CompanyViewSet(viewsets.ModelViewSet):
     search_fields = ['translations__name']
 
 class ProductRatingViewSet(viewsets.ModelViewSet):
-    queryset = ProductRating.objects.all()
+    queryset = ProductRating.objects.all().order_by(F('star').desc())
     serializer_class = ProductRatingSerializer
 
 
