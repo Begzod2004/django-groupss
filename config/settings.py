@@ -150,17 +150,17 @@ import os, dj_database_url
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.parse(env('DATABASE_URL'))
-    }
-
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'mydatabase',
+#     'default': dj_database_url.parse(env('DATABASE_URL'))
 #     }
-# }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
+}
 
 
 # Password validation
