@@ -12,7 +12,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1  
 
 # install dependencies  
-RUN pip install --upgrade pip  
+RUN apk add --update py-pip
 
 # copy whole project to your docker home directory. 
 COPY . $DockerHOME  
