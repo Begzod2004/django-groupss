@@ -1,5 +1,5 @@
 # base image  
-FROM python:3.8   
+FROM python:3.8-alpine
 # setup environment variable  
 ENV DockerHOME=/home/app/webapp  
 ENV SECRET_KEY=django-insecure-*#3kq$q!bmd@=7!=&e!sxjsb1#g)t_q+)5yrh2k00s*f707r!l
