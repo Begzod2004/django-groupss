@@ -62,19 +62,19 @@ class CompanyProductSerializer(serializers.ModelSerializer):
 
 class ProductRetrieveSerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Product)
-    
-    
-    def to_representation(self, instance):
-        rep = super().to_representation(instance)
+    product_reviews = serializers.SerializerMethodField()
+    average_rating = serializers.SerializerMethodField()
+
+    def get_product_reviews(self, instance):
         reviews = instance.productreview.all()
-        # rewiews = ProductReview.objects.filter(product = instance) # hamma oziga boglangan review larni olish
-        review_ser = ProductRetrieveSerializer(reviews, many=True)
-        rep["product_reviews"] = review_ser.data
-        return rep
+        review_ser = ProductRatingSerializer(reviews, many=True)
+        return review_ser.data
+
+    def get_average_rating(self, instance):
+        ratings = ProductRating.objects.filter(product=instance)
+        avg_rating = ratings.aggregate(Avg('star'))['star__avg']
+        return avg_rating
 
     class Meta:
         model = Product
         fields = "__all__"
-
-    def get_review_avg(self, obj):
-        return ProductRating.objects.filter(product=obj).aggregate(Avg('star'), Sum('star'), Count('star'))

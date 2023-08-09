@@ -23,7 +23,7 @@ class SubCategoryViewSet(viewsets.ModelViewSet):
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all().order_by('-updated_at')
-    serializer_class = ProductSerializer
+    serializer_class = ProductRetrieveSerializer
     http_method_names = ['get', 'head', 'options']
     filterset_class = ProductFilter
     filter_backends = [SearchFilter]
