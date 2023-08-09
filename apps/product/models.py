@@ -104,7 +104,7 @@ class ProductRating(models.Model):
         verbose_name_plural = _('Product Ratings')
 
     def __str__(self):
-        return f"{self.product.name} - {self.rating_stars} stars"
+        return f"{self.product.name} - {self.star} stars"
 
 
 class CompanyProduct(models.Model):
