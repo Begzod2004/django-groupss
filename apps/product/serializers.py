@@ -1,29 +1,34 @@
 from rest_framework import serializers
 from parler_rest.serializers import TranslatableModelSerializer
 from parler_rest.fields import TranslatedFieldsField
-from .models import Company, Product, ProductRating, CompanyProduct, Category, SubCategory
+from .models import Company, Product, ProductRating, CompanyProduct, Category, SubCategory, ProductImage
 from rest_framework import serializers
 from django.db.models import Avg , Sum, Count
 
+class SubCategorySerializer(TranslatableModelSerializer):
+    translations = TranslatedFieldsField(shared_model=SubCategory)
+    
+    class Meta:
+        model = SubCategory
+        fields = '__all__'
+
 class CategorySerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Category)
+    subcategories = SubCategorySerializer(many=True, read_only=True)
 
     class Meta:
         model = Category
         fields = '__all__'
         ref_name = 'CategorySerializer'
 
-class SubCategorySerializer(TranslatableModelSerializer):
-    translations = TranslatedFieldsField(shared_model=SubCategory)
-    category = CategorySerializer(read_only=True)
-
-    class Meta:
-        model = SubCategory
-        fields = '__all__'
-
-
+    def get_subcategory(self, category_instance):
+        subcategories = SubCategory.objects.filter(category=category_instance)
+        serializer = SubCategorySerializer(subcategories, many=True)
+        return serializer.data
+    
 class ProductSerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Product)
+    category = SubCategorySerializer(read_only=True)
 
     class Meta:
         model = Product
@@ -32,13 +37,14 @@ class ProductSerializer(TranslatableModelSerializer):
 class CompanySerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Company)
     products = serializers.SerializerMethodField()
+    category = CategorySerializer(read_only=True)
 
     class Meta:
         model = Company
         fields = '__all__'
 
     def get_products(self, instance):
-        products = Product.objects.filter(campany=instance)  # Use "campany" instead of "company"
+        products = Product.objects.filter(campany=instance)
         product_serializer = ProductSerializer(products, many=True)
         return product_serializer.data
 
@@ -60,10 +66,18 @@ class CompanyProductSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class ProductImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductImage
+        fields = '__all__'
+
+
 class ProductRetrieveSerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Product)
     product_reviews = serializers.SerializerMethodField()
     average_rating = serializers.SerializerMethodField()
+    category = SubCategorySerializer(read_only=True)
+    images = ProductImageSerializer(many=True, read_only=True)
 
     def get_product_reviews(self, instance):
         reviews = instance.productreview.all()

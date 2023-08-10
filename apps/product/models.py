@@ -1,21 +1,7 @@
-from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 from parler.models import TranslatableModel, TranslatedFields
-
-# class TypeProduct(TranslatableModel):
-#     translations = TranslatedFields(
-#         name=models.CharField(max_length=255, verbose_name=_('Name')),
-#     )
-#     is_active = models.BooleanField(default=True)
-
-#     def __str__(self):
-#         return self.name
-
-#     class Meta:
-#         verbose_name = _('Tur kategoryasi')
-#         verbose_name_plural = _('Tur kategoryalari')
 
 class Category(TranslatableModel):
     translations = TranslatedFields(
@@ -26,6 +12,10 @@ class Category(TranslatableModel):
 
     def __str__(self):
         return self.name
+    
+    def subcategories(self):
+        return SubCategory.objects.filter(category=self)
+    
 
     class Meta:
         verbose_name = _('Category')
@@ -75,13 +65,11 @@ class Product(TranslatableModel):
         compound = models.CharField(max_length=1000, verbose_name=_('maxsulot haqida')),
         tag = models.TextField(verbose_name=_('Tag')),
     )
-    category = models.ForeignKey(Category,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))
+    category = models.ForeignKey(SubCategory,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))
     campany = models.ForeignKey(Company, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))
     created_at = models.DateTimeField(verbose_name=_('Created at'))
     updated_at = models.DateTimeField(verbose_name=_('Updated at'))
     is_featured = models.BooleanField(default=False, verbose_name=_('Maxus post'))
-    views = models.IntegerField(default=0, verbose_name=_('Ko\'rilganlar soni'))
 
     def __str__(self):
         return self.name
@@ -90,6 +78,15 @@ class Product(TranslatableModel):
         verbose_name = _('MAXSULOT')
         verbose_name_plural = _('Mahsulotlar')
         ordering = ['-created_at']
+
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
+    image = models.ImageField(upload_to='product_images')
+
+    def __str__(self):
+        return f"Image for {self.product.name}"
+
 
 
 class ProductRating(models.Model):

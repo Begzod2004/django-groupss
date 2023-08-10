@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Company, Category, Product, ProductRating, CompanyProduct, SubCategory
+from .models import Company, Category, Product, ProductRating, CompanyProduct, SubCategory, ProductImage
 from parler.admin import TranslatableAdmin
 
 @admin.register(ProductRating)
@@ -36,10 +36,13 @@ class CategoryAdmin(TranslatableAdmin):
 admin.site.register(Category, CategoryAdmin)
 
 
+class ProductImageInline(admin.TabularInline):
+    model = ProductImage
 
 
 class ProductAdmin(TranslatableAdmin):
-    list_display = ['name', 'created_at', 'is_featured', 'views', 'campany']
+    inlines = [ProductImageInline]
+    list_display = ['name', 'created_at', 'is_featured', 'campany']
     list_display_links = ['name']
     search_fields = ['name', 'compound', 'tag']
     list_per_page = 20
@@ -48,11 +51,9 @@ class ProductAdmin(TranslatableAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('name', 'compound', 'tag', 'campany', 'category', 'image', 'is_featured', 'created_at', 'updated_at', 'views'),
+            'fields': ('name', 'compound', 'tag', 'campany', 'category', 'is_featured', 'created_at', 'updated_at'),
         },),
     )
-    readonly_fields = ['views']
-
 
 admin.site.register(Product, ProductAdmin)
 
