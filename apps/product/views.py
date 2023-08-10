@@ -1,8 +1,8 @@
 
 from requests import Response
 from rest_framework import viewsets, filters
-from .serializers import CompanySerializer, ProductSerializer, ProductRatingSerializer, ProductRetrieveSerializer, SubCategorySerializer
-from .models import Company, Product, ProductRating, SubCategory
+from .serializers import CompanySerializer, ProductSerializer, ProductRatingSerializer, ProductRetrieveSerializer, SubCategorySerializer, ApplicationSerializer, QuestionSerializer
+from .models import Company, Product, ProductRating, SubCategory, Application, Question
 from .filters import ProductFilter
 from rest_framework.filters import SearchFilter
 from .models import Category
@@ -55,5 +55,10 @@ class ProductRatingViewSet(viewsets.ModelViewSet):
     queryset = ProductRating.objects.all().order_by(F('star').desc())
     serializer_class = ProductRatingSerializer
 
+class ApplicationViewSet(viewsets.ModelViewSet):
+    queryset = Application.objects.all()
+    serializer_class = ApplicationSerializer
 
-
+class QuestionViewSet(viewsets.ModelViewSet):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer

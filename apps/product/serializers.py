@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from parler_rest.serializers import TranslatableModelSerializer
 from parler_rest.fields import TranslatedFieldsField
-from .models import Company, Product, ProductRating, CompanyProduct, Category, SubCategory, ProductImage
+from .models import Company, Product, ProductRating, CompanyProduct, Category, SubCategory, ProductImage, Application, Question
 from rest_framework import serializers
 from django.db.models import Avg , Sum, Count
 
@@ -92,3 +92,22 @@ class ProductRetrieveSerializer(TranslatableModelSerializer):
     class Meta:
         model = Product
         fields = "__all__"
+
+
+class ApplicationSerializer(serializers.ModelSerializer):
+    
+
+    class Meta:
+        model = Application
+        fields = ['id', 'name', 'phone_number', 'lacation','campany_name', 'date',
+                  'checked']
+        
+
+class QuestionSerializer(serializers.ModelSerializer):
+    
+
+    class Meta:
+        model = Question
+        fields = ['id', 'name', 'phone_number', 'lacation','text', 'date',
+                  'checked']
+        
