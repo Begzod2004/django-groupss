@@ -35,15 +35,6 @@ class ProductViewSet(viewsets.ModelViewSet):
             return ProductRetrieveSerializer
         return super().get_serializer_class()
     
-    def retrieve(self, request, *args, **kwargs):
-        saved_views = request.session.get('views', [])
-        Product = self.get_object()
-        if Product.id not in saved_views:
-            Product.views += 1
-            Product.save()
-            saved_views.append(Product.id)
-            request.session['views'] = saved_views
-        return super().retrieve(request, *args, **kwargs)
 
 class CompanyViewSet(viewsets.ModelViewSet):
     queryset = Company.objects.all()

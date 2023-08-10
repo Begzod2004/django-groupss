@@ -665,6 +665,70 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -1091,22 +1155,6 @@
         "description": "django.utils.html",
         "isExtraImport": true,
         "detail": "django.utils.html",
-        "documentation": {}
-    },
-    {
-        "label": "MinValueValidator",
-        "importPath": "django.core.validators",
-        "description": "django.core.validators",
-        "isExtraImport": true,
-        "detail": "django.core.validators",
-        "documentation": {}
-    },
-    {
-        "label": "MaxValueValidator",
-        "importPath": "django.core.validators",
-        "description": "django.core.validators",
-        "isExtraImport": true,
-        "detail": "django.core.validators",
         "documentation": {}
     },
     {
@@ -1648,6 +1696,51 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0002_productimage",
+        "description": "apps.product.migrations.0002_productimage",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='ProductImage',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('image', models.ImageField(upload_to='product_images')),",
+        "detail": "apps.product.migrations.0002_productimage",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0003_remove_product_image",
+        "description": "apps.product.migrations.0003_remove_product_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0002_productimage'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='product',\n            name='image',\n        ),\n    ]",
+        "detail": "apps.product.migrations.0003_remove_product_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0004_remove_product_views",
+        "description": "apps.product.migrations.0004_remove_product_views",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0003_remove_product_image'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='product',\n            name='views',\n        ),\n    ]",
+        "detail": "apps.product.migrations.0004_remove_product_views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0005_alter_product_category",
+        "description": "apps.product.migrations.0005_alter_product_category",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0004_remove_product_views'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='product',\n            name='category',\n            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='product.subcategory', verbose_name='Kategorylari'),\n        ),",
+        "detail": "apps.product.migrations.0005_alter_product_category",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0006_application_question",
+        "description": "apps.product.migrations.0006_application_question",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0005_alter_product_category'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Application',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(help_text='Nomi', max_length=123)),",
+        "detail": "apps.product.migrations.0006_application_question",
+        "documentation": {}
+    },
+    {
         "label": "ProductRatingAdmin",
         "kind": 6,
         "importPath": "apps.product.admin",
@@ -1675,11 +1768,20 @@
         "documentation": {}
     },
     {
+        "label": "ProductImageInline",
+        "kind": 6,
+        "importPath": "apps.product.admin",
+        "description": "apps.product.admin",
+        "peekOfCode": "class ProductImageInline(admin.TabularInline):\n    model = ProductImage\nclass ProductAdmin(TranslatableAdmin):\n    inlines = [ProductImageInline]\n    list_display = ['name', 'created_at', 'is_featured', 'campany']\n    list_display_links = ['name']\n    search_fields = ['name', 'compound', 'tag']\n    list_per_page = 20\n    list_filter = ['is_featured', 'category']\n    list_editable = ['is_featured']",
+        "detail": "apps.product.admin",
+        "documentation": {}
+    },
+    {
         "label": "ProductAdmin",
         "kind": 6,
         "importPath": "apps.product.admin",
         "description": "apps.product.admin",
-        "peekOfCode": "class ProductAdmin(TranslatableAdmin):\n    list_display = ['name', 'created_at', 'is_featured', 'views', 'campany']\n    list_display_links = ['name']\n    search_fields = ['name', 'compound', 'tag']\n    list_per_page = 20\n    list_filter = ['is_featured', 'category']\n    list_editable = ['is_featured']\n    fieldsets = (\n        (None, {\n            'fields': ('name', 'compound', 'tag', 'campany', 'category', 'image', 'is_featured', 'created_at', 'updated_at', 'views'),",
+        "peekOfCode": "class ProductAdmin(TranslatableAdmin):\n    inlines = [ProductImageInline]\n    list_display = ['name', 'created_at', 'is_featured', 'campany']\n    list_display_links = ['name']\n    search_fields = ['name', 'compound', 'tag']\n    list_per_page = 20\n    list_filter = ['is_featured', 'category']\n    list_editable = ['is_featured']\n    fieldsets = (\n        (None, {",
         "detail": "apps.product.admin",
         "documentation": {}
     },
@@ -1698,6 +1800,24 @@
         "importPath": "apps.product.admin",
         "description": "apps.product.admin",
         "peekOfCode": "class SubCategoryAdmin(TranslatableAdmin):\n    list_display = ['name', 'category', 'is_active']\n    list_display_links = ['name']\n    search_fields = ['name', 'category__name']\n    list_filter = ['category', 'is_active']\n    list_per_page = 20\n    fieldsets = (\n        (None, {\n            'fields': ('name', 'category', 'is_active'),\n        }),",
+        "detail": "apps.product.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ApplicationAdmin",
+        "kind": 6,
+        "importPath": "apps.product.admin",
+        "description": "apps.product.admin",
+        "peekOfCode": "class ApplicationAdmin(admin.ModelAdmin):\n    list_display = ['name', 'phone_number', 'display_checked', 'date']\n    list_filter = ['checked']\n    search_fields = ['name', 'phone_number']\n    list_per_page = 50\n    readonly_fields = ['date']\n    def display_checked(self, obj):\n        if obj.checked:\n            return format_html('<span style=\"color: green;\"><b>&#10004;</b></span>')  # Checked icon\n        else:",
+        "detail": "apps.product.admin",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionAdmin",
+        "kind": 6,
+        "importPath": "apps.product.admin",
+        "description": "apps.product.admin",
+        "peekOfCode": "class QuestionAdmin(admin.ModelAdmin):\n    list_display = ['name', 'phone_number', 'display_checked', 'date']\n    list_filter = ['checked']\n    search_fields = ['name', 'phone_number', 'campany_name']\n    list_per_page = 50\n    readonly_fields = ['date']\n    def display_checked(self, obj):\n        if obj.checked:\n            return format_html('<span style=\"color: green;\"><b>&#10004;</b></span>')  # Checked icon\n        else:",
         "detail": "apps.product.admin",
         "documentation": {}
     },
@@ -1724,7 +1844,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Category(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=255, verbose_name=_('Name')),\n    )\n    image = models.ImageField(upload_to='category_images', verbose_name=_('Rasm'))\n    is_active = models.BooleanField(default=True)\n    def __str__(self):\n        return self.name\n    class Meta:\n        verbose_name = _('Category')",
+        "peekOfCode": "class Category(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=255, verbose_name=_('Name')),\n    )\n    image = models.ImageField(upload_to='category_images', verbose_name=_('Rasm'))\n    is_active = models.BooleanField(default=True)\n    def __str__(self):\n        return self.name\n    def subcategories(self):\n        return SubCategory.objects.filter(category=self)",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1751,7 +1871,16 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Product(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=300, verbose_name=_('Nomi')),\n        compound = models.CharField(max_length=1000, verbose_name=_('maxsulot haqida')),\n        tag = models.TextField(verbose_name=_('Tag')),\n    )\n    category = models.ForeignKey(Category,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))\n    campany = models.ForeignKey(Company, on_delete=models.CASCADE)\n    image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))\n    created_at = models.DateTimeField(verbose_name=_('Created at'))",
+        "peekOfCode": "class Product(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=300, verbose_name=_('Nomi')),\n        compound = models.CharField(max_length=1000, verbose_name=_('maxsulot haqida')),\n        tag = models.TextField(verbose_name=_('Tag')),\n    )\n    category = models.ForeignKey(SubCategory,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))\n    campany = models.ForeignKey(Company, on_delete=models.CASCADE)\n    created_at = models.DateTimeField(verbose_name=_('Created at'))\n    updated_at = models.DateTimeField(verbose_name=_('Updated at'))",
+        "detail": "apps.product.models",
+        "documentation": {}
+    },
+    {
+        "label": "ProductImage",
+        "kind": 6,
+        "importPath": "apps.product.models",
+        "description": "apps.product.models",
+        "peekOfCode": "class ProductImage(models.Model):\n    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')\n    image = models.ImageField(upload_to='product_images')\n    def __str__(self):\n        return f\"Image for {self.product.name}\"\nclass ProductRating(models.Model):\n    star = models.IntegerField(default=0 , verbose_name = \"star\")\n    product = models.ForeignKey(Product, on_delete=models.CASCADE,related_name='productreview')\n    review_comment = models.TextField()\n    review_date = models.DateTimeField(auto_now_add=True, verbose_name='review_created_date')",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1769,17 +1898,26 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class CompanyProduct(models.Model):\n    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='company_products')\n    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='company_products')\n    class Meta:\n        verbose_name = _('Company Product')\n        verbose_name_plural = _('Company Products')\n        unique_together = [['company', 'product']]  # Ensures that a company-product pair is unique\n    def __str__(self):\n        return f\"{self.company.name} - {self.product.name}\"",
+        "peekOfCode": "class CompanyProduct(models.Model):\n    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='company_products')\n    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='company_products')\n    class Meta:\n        verbose_name = _('Company Product')\n        verbose_name_plural = _('Company Products')\n        unique_together = [['company', 'product']]  # Ensures that a company-product pair is unique\n    def __str__(self):\n        return f\"{self.company.name} - {self.product.name}\"\nclass Application(models.Model):",
         "detail": "apps.product.models",
         "documentation": {}
     },
     {
-        "label": "CategorySerializer",
+        "label": "Application",
         "kind": 6,
-        "importPath": "apps.product.serializers",
-        "description": "apps.product.serializers",
-        "peekOfCode": "class CategorySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Category)\n    class Meta:\n        model = Category\n        fields = '__all__'\n        ref_name = 'CategorySerializer'\nclass SubCategorySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=SubCategory)\n    category = CategorySerializer(read_only=True)\n    class Meta:",
-        "detail": "apps.product.serializers",
+        "importPath": "apps.product.models",
+        "description": "apps.product.models",
+        "peekOfCode": "class Application(models.Model):\n    name = models.CharField(max_length=123, help_text=\"Nomi\")\n    lacation = models.CharField(max_length=255, help_text=\"davlatlar\")\n    phone_number = models.CharField(max_length=100, unique=True, help_text=\"Telefon raqami\")\n    checked = models.BooleanField(default=False, help_text=\"Tekshirilganmi?\")\n    campany_name = models.CharField(max_length=123, help_text=\"Kampaniya nomi\")\n    date = models.DateTimeField(auto_now_add=True, help_text=\"Sana\")\n    class Meta:\n        verbose_name = _(\"So'rovlar mahsulot joylash\")\n        verbose_name_plural = _(\"So'rovlar mahsulot joylash\")",
+        "detail": "apps.product.models",
+        "documentation": {}
+    },
+    {
+        "label": "Question",
+        "kind": 6,
+        "importPath": "apps.product.models",
+        "description": "apps.product.models",
+        "peekOfCode": "class Question(models.Model):\n    name = models.CharField(max_length=123, help_text=\"Nomi\")\n    lacation = models.CharField(max_length=255, help_text=\"davlatlar\")\n    phone_number = models.CharField(max_length=100, unique=False, help_text=\"Telefon raqami\")\n    checked = models.BooleanField(default=False, help_text=\"Tekshirilganmi?\")\n    text = models.TextField(help_text=\"Matn\")\n    date = models.DateTimeField(auto_now_add=True, help_text=\"Sana\")\n    class Meta:\n        verbose_name = _('Savol')\n        verbose_name_plural = _('Savollar')",
+        "detail": "apps.product.models",
         "documentation": {}
     },
     {
@@ -1787,7 +1925,16 @@
         "kind": 6,
         "importPath": "apps.product.serializers",
         "description": "apps.product.serializers",
-        "peekOfCode": "class SubCategorySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=SubCategory)\n    category = CategorySerializer(read_only=True)\n    class Meta:\n        model = SubCategory\n        fields = '__all__'\nclass ProductSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    class Meta:\n        model = Product",
+        "peekOfCode": "class SubCategorySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=SubCategory)\n    class Meta:\n        model = SubCategory\n        fields = '__all__'\nclass CategorySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Category)\n    subcategories = SubCategorySerializer(many=True, read_only=True)\n    class Meta:\n        model = Category",
+        "detail": "apps.product.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CategorySerializer",
+        "kind": 6,
+        "importPath": "apps.product.serializers",
+        "description": "apps.product.serializers",
+        "peekOfCode": "class CategorySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Category)\n    subcategories = SubCategorySerializer(many=True, read_only=True)\n    class Meta:\n        model = Category\n        fields = '__all__'\n        ref_name = 'CategorySerializer'\n    def get_subcategory(self, category_instance):\n        subcategories = SubCategory.objects.filter(category=category_instance)\n        serializer = SubCategorySerializer(subcategories, many=True)",
         "detail": "apps.product.serializers",
         "documentation": {}
     },
@@ -1796,7 +1943,7 @@
         "kind": 6,
         "importPath": "apps.product.serializers",
         "description": "apps.product.serializers",
-        "peekOfCode": "class ProductSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    class Meta:\n        model = Product\n        fields = '__all__'\nclass CompanySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Company)\n    products = serializers.SerializerMethodField()\n    class Meta:\n        model = Company",
+        "peekOfCode": "class ProductSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    category = SubCategorySerializer(read_only=True)\n    class Meta:\n        model = Product\n        fields = '__all__'\nclass CompanySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Company)\n    products = serializers.SerializerMethodField()\n    type_product = CategorySerializer(read_only=True)",
         "detail": "apps.product.serializers",
         "documentation": {}
     },
@@ -1805,7 +1952,7 @@
         "kind": 6,
         "importPath": "apps.product.serializers",
         "description": "apps.product.serializers",
-        "peekOfCode": "class CompanySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Company)\n    products = serializers.SerializerMethodField()\n    class Meta:\n        model = Company\n        fields = '__all__'\n    def get_products(self, instance):\n        products = Product.objects.filter(campany=instance)  # Use \"campany\" instead of \"company\"\n        product_serializer = ProductSerializer(products, many=True)\n        return product_serializer.data",
+        "peekOfCode": "class CompanySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Company)\n    products = serializers.SerializerMethodField()\n    type_product = CategorySerializer(read_only=True)\n    class Meta:\n        model = Company\n        fields = '__all__'\n    def get_products(self, instance):\n        products = Product.objects.filter(campany=instance)\n        product_serializer = ProductSerializer(products, many=True)",
         "detail": "apps.product.serializers",
         "documentation": {}
     },
@@ -1823,7 +1970,16 @@
         "kind": 6,
         "importPath": "apps.product.serializers",
         "description": "apps.product.serializers",
-        "peekOfCode": "class CompanyProductSerializer(serializers.ModelSerializer):\n    company = CompanySerializer()  # Capitalized field name\n    product = ProductSerializer()  # Capitalized field name\n    class Meta:\n        model = CompanyProduct\n        fields = '__all__'\nclass ProductRetrieveSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    def to_representation(self, instance):\n        rep = super().to_representation(instance)",
+        "peekOfCode": "class CompanyProductSerializer(serializers.ModelSerializer):\n    company = CompanySerializer()  # Capitalized field name\n    product = ProductSerializer()  # Capitalized field name\n    class Meta:\n        model = CompanyProduct\n        fields = '__all__'\nclass ProductImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProductImage\n        fields = '__all__'",
+        "detail": "apps.product.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ProductImageSerializer",
+        "kind": 6,
+        "importPath": "apps.product.serializers",
+        "description": "apps.product.serializers",
+        "peekOfCode": "class ProductImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProductImage\n        fields = '__all__'\nclass ProductRetrieveSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    product_reviews = serializers.SerializerMethodField()\n    average_rating = serializers.SerializerMethodField()\n    category = SubCategorySerializer(read_only=True)\n    images = ProductImageSerializer(many=True, read_only=True)",
         "detail": "apps.product.serializers",
         "documentation": {}
     },
@@ -1832,7 +1988,25 @@
         "kind": 6,
         "importPath": "apps.product.serializers",
         "description": "apps.product.serializers",
-        "peekOfCode": "class ProductRetrieveSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    def to_representation(self, instance):\n        rep = super().to_representation(instance)\n        reviews = instance.productreview.all()\n        # rewiews = ProductReview.objects.filter(product = instance) # hamma oziga boglangan review larni olish\n        review_ser = ProductRetrieveSerializer(reviews, many=True)\n        rep[\"product_reviews\"] = review_ser.data\n        return rep\n    class Meta:",
+        "peekOfCode": "class ProductRetrieveSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    product_reviews = serializers.SerializerMethodField()\n    average_rating = serializers.SerializerMethodField()\n    category = SubCategorySerializer(read_only=True)\n    images = ProductImageSerializer(many=True, read_only=True)\n    def get_product_reviews(self, instance):\n        reviews = instance.productreview.all()\n        review_ser = ProductRatingSerializer(reviews, many=True)\n        return review_ser.data",
+        "detail": "apps.product.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ApplicationSerializer",
+        "kind": 6,
+        "importPath": "apps.product.serializers",
+        "description": "apps.product.serializers",
+        "peekOfCode": "class ApplicationSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Application\n        fields = ['id', 'name', 'phone_number', 'lacation','campany_name', 'date',\n                  'checked']\nclass QuestionSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Question\n        fields = ['id', 'name', 'phone_number', 'lacation','text', 'date',\n                  'checked']",
+        "detail": "apps.product.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionSerializer",
+        "kind": 6,
+        "importPath": "apps.product.serializers",
+        "description": "apps.product.serializers",
+        "peekOfCode": "class QuestionSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Question\n        fields = ['id', 'name', 'phone_number', 'lacation','text', 'date',\n                  'checked']",
         "detail": "apps.product.serializers",
         "documentation": {}
     },
@@ -1841,7 +2015,7 @@
         "kind": 5,
         "importPath": "apps.product.urls",
         "description": "apps.product.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'company', CompanyViewSet)\nrouter.register(r'products', ProductViewSet)\nrouter.register(r'product-ratings', ProductRatingViewSet)\nrouter.register(r'category', CategoryViewSet)\nrouter.register(r'subcategory', SubCategoryViewSet)\nurlpatterns = [\n    path('', include(router.urls)),\n]",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'company', CompanyViewSet)\nrouter.register(r'products', ProductViewSet)\nrouter.register(r'product-ratings', ProductRatingViewSet)\nrouter.register(r'category', CategoryViewSet)\nrouter.register(r'subcategory', SubCategoryViewSet)\nrouter.register(r'applications', ApplicationViewSet)\nrouter.register(r'questions', QuestionViewSet)\nurlpatterns = [\n    path('', include(router.urls)),",
         "detail": "apps.product.urls",
         "documentation": {}
     },
@@ -1868,7 +2042,7 @@
         "kind": 6,
         "importPath": "apps.product.views",
         "description": "apps.product.views",
-        "peekOfCode": "class SubCategoryViewSet(viewsets.ModelViewSet):\n    queryset = SubCategory.objects.all()\n    serializer_class = SubCategorySerializer\n    # Add any additional custom actions or methods related to the Category model here\nclass ProductViewSet(viewsets.ModelViewSet):\n    queryset = Product.objects.all().order_by('-updated_at')\n    serializer_class = ProductSerializer\n    http_method_names = ['get', 'head', 'options']\n    filterset_class = ProductFilter\n    filter_backends = [SearchFilter]",
+        "peekOfCode": "class SubCategoryViewSet(viewsets.ModelViewSet):\n    queryset = SubCategory.objects.all()\n    serializer_class = SubCategorySerializer\n    # Add any additional custom actions or methods related to the Category model here\nclass ProductViewSet(viewsets.ModelViewSet):\n    queryset = Product.objects.all().order_by('-updated_at')\n    serializer_class = ProductRetrieveSerializer\n    http_method_names = ['get', 'head', 'options']\n    filterset_class = ProductFilter\n    filter_backends = [SearchFilter]",
         "detail": "apps.product.views",
         "documentation": {}
     },
@@ -1877,7 +2051,7 @@
         "kind": 6,
         "importPath": "apps.product.views",
         "description": "apps.product.views",
-        "peekOfCode": "class ProductViewSet(viewsets.ModelViewSet):\n    queryset = Product.objects.all().order_by('-updated_at')\n    serializer_class = ProductSerializer\n    http_method_names = ['get', 'head', 'options']\n    filterset_class = ProductFilter\n    filter_backends = [SearchFilter]\n    search_fields = ['translations__name'] # Add this line\n    ordering_fields = ['created_at', 'name', 'type_product']\n    def get_serializer_class(self):\n        if self.action == 'retrieve':",
+        "peekOfCode": "class ProductViewSet(viewsets.ModelViewSet):\n    queryset = Product.objects.all().order_by('-updated_at')\n    serializer_class = ProductRetrieveSerializer\n    http_method_names = ['get', 'head', 'options']\n    filterset_class = ProductFilter\n    filter_backends = [SearchFilter]\n    search_fields = ['translations__name'] # Add this line\n    ordering_fields = ['created_at', 'name', 'type_product']\n    def get_serializer_class(self):\n        if self.action == 'retrieve':",
         "detail": "apps.product.views",
         "documentation": {}
     },
@@ -1886,7 +2060,7 @@
         "kind": 6,
         "importPath": "apps.product.views",
         "description": "apps.product.views",
-        "peekOfCode": "class CompanyViewSet(viewsets.ModelViewSet):\n    queryset = Company.objects.all()\n    serializer_class = CompanySerializer\n    filter_backends = [SearchFilter]\n    search_fields = ['translations__name']\nclass ProductRatingViewSet(viewsets.ModelViewSet):\n    queryset = ProductRating.objects.all().order_by(F('star').desc())\n    serializer_class = ProductRatingSerializer",
+        "peekOfCode": "class CompanyViewSet(viewsets.ModelViewSet):\n    queryset = Company.objects.all()\n    serializer_class = CompanySerializer\n    filter_backends = [SearchFilter]\n    search_fields = ['translations__name']\nclass ProductRatingViewSet(viewsets.ModelViewSet):\n    queryset = ProductRating.objects.all().order_by(F('star').desc())\n    serializer_class = ProductRatingSerializer\nclass ApplicationViewSet(viewsets.ModelViewSet):\n    queryset = Application.objects.all()",
         "detail": "apps.product.views",
         "documentation": {}
     },
@@ -1895,7 +2069,25 @@
         "kind": 6,
         "importPath": "apps.product.views",
         "description": "apps.product.views",
-        "peekOfCode": "class ProductRatingViewSet(viewsets.ModelViewSet):\n    queryset = ProductRating.objects.all().order_by(F('star').desc())\n    serializer_class = ProductRatingSerializer",
+        "peekOfCode": "class ProductRatingViewSet(viewsets.ModelViewSet):\n    queryset = ProductRating.objects.all().order_by(F('star').desc())\n    serializer_class = ProductRatingSerializer\nclass ApplicationViewSet(viewsets.ModelViewSet):\n    queryset = Application.objects.all()\n    serializer_class = ApplicationSerializer\nclass QuestionViewSet(viewsets.ModelViewSet):\n    queryset = Question.objects.all()\n    serializer_class = QuestionSerializer",
+        "detail": "apps.product.views",
+        "documentation": {}
+    },
+    {
+        "label": "ApplicationViewSet",
+        "kind": 6,
+        "importPath": "apps.product.views",
+        "description": "apps.product.views",
+        "peekOfCode": "class ApplicationViewSet(viewsets.ModelViewSet):\n    queryset = Application.objects.all()\n    serializer_class = ApplicationSerializer\nclass QuestionViewSet(viewsets.ModelViewSet):\n    queryset = Question.objects.all()\n    serializer_class = QuestionSerializer",
+        "detail": "apps.product.views",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionViewSet",
+        "kind": 6,
+        "importPath": "apps.product.views",
+        "description": "apps.product.views",
+        "peekOfCode": "class QuestionViewSet(viewsets.ModelViewSet):\n    queryset = Question.objects.all()\n    serializer_class = QuestionSerializer",
         "detail": "apps.product.views",
         "documentation": {}
     },

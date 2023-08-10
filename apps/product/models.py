@@ -141,7 +141,7 @@ class Application(models.Model):
 class Question(models.Model):
     name = models.CharField(max_length=123, help_text="Nomi")
     lacation = models.CharField(max_length=255, help_text="davlatlar")
-    phone_number = models.CharField(max_length=100, help_text="Telefon raqami")
+    phone_number = models.CharField(max_length=100, unique=False, help_text="Telefon raqami")
     checked = models.BooleanField(default=False, help_text="Tekshirilganmi?")
     text = models.TextField(help_text="Matn")
     date = models.DateTimeField(auto_now_add=True, help_text="Sana")
