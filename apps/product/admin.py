@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Company, Category, Product, ProductRating, CompanyProduct, SubCategory, ProductImage
+from .models import Company, Category, Product, ProductRating, CompanyProduct, SubCategory,ProductImage , Application, Question
 from parler.admin import TranslatableAdmin
 
 @admin.register(ProductRating)
@@ -105,20 +105,42 @@ admin.site.register(SubCategory, SubCategoryAdmin)
 admin.site.register(Company, CompanyAdmin)
 
 
-# class TypeProductAdmin(TranslatableAdmin):
-#     list_display = ['name', 'is_active']
-#     list_display_links = ['name']
-#     search_fields = ['translations__name']  # Search by translated name
-#     list_per_page = 20
-#     list_filter = ['is_active']
+class ApplicationAdmin(admin.ModelAdmin):
+    list_display = ['name', 'phone_number', 'display_checked', 'date']
+    list_filter = ['checked']
+    search_fields = ['name', 'phone_number']
+    list_per_page = 50
+    readonly_fields = ['date']
 
-#     fieldsets = (
-#         (None, {
-#             'fields': ('name', 'is_active'),
-#         }),
-#     )
+    def display_checked(self, obj):
+        if obj.checked:
+            return format_html('<span style="color: green;"><b>&#10004;</b></span>')  # Checked icon
+        else:
+            return format_html('<span style="color: red;"><b>&#10008;</b></span>')  # X icon
 
-# admin.site.register(TypeProduct, TypeProductAdmin)
+    display_checked.short_description = 'Checked'
+
+
+admin.site.register(Application, ApplicationAdmin)
+
+
+class QuestionAdmin(admin.ModelAdmin):
+    list_display = ['name', 'phone_number', 'display_checked', 'date']
+    list_filter = ['checked']
+    search_fields = ['name', 'phone_number', 'campany_name']
+    list_per_page = 50
+    readonly_fields = ['date']
+
+    def display_checked(self, obj):
+        if obj.checked:
+            return format_html('<span style="color: green;"><b>&#10004;</b></span>')  # Checked icon
+        else:
+            return format_html('<span style="color: red;"><b>&#10008;</b></span>')  # X icon
+
+    display_checked.short_description = 'Checked'
+
+
+admin.site.register(Question, QuestionAdmin)
 
 
 

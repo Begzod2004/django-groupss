@@ -115,3 +115,43 @@ class CompanyProduct(models.Model):
 
     def __str__(self):
         return f"{self.company.name} - {self.product.name}"
+    
+
+class Application(models.Model):
+    name = models.CharField(max_length=123, help_text="Nomi")
+    lacation = models.CharField(max_length=255, help_text="davlatlar")
+    phone_number = models.CharField(max_length=100, unique=True, help_text="Telefon raqami")
+    checked = models.BooleanField(default=False, help_text="Tekshirilganmi?")
+    campany_name = models.CharField(max_length=123, help_text="Kampaniya nomi")
+    date = models.DateTimeField(auto_now_add=True, help_text="Sana")
+
+    class Meta:
+        verbose_name = _("So'rovlar mahsulot joylash")
+        verbose_name_plural = _("So'rovlar mahsulot joylash")
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+
+
+
+class Question(models.Model):
+    name = models.CharField(max_length=123, help_text="Nomi")
+    lacation = models.CharField(max_length=255, help_text="davlatlar")
+    phone_number = models.CharField(max_length=100, unique=True, help_text="Telefon raqami")
+    checked = models.BooleanField(default=False, help_text="Tekshirilganmi?")
+    text = models.TextField(help_text="Matn")
+    date = models.DateTimeField(auto_now_add=True, help_text="Sana")
+
+    class Meta:
+        verbose_name = _('Savol')
+        verbose_name_plural = _('Savollar')
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
