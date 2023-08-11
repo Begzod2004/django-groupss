@@ -73,7 +73,7 @@ REST_FRAMEWORK = {
 }
 
 LOCAL_BASE_URL = 'http://127.0.0.1:8000'
-PROD_BASE_URL = 'http://localhost:5173'
+PROD_BASE_URL = 'http://madeinkokand.uz'
 # PROD_BASE_URL = 'https://w4.citynet.uz:4441'
 
 MIDDLEWARE = [
@@ -108,7 +108,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
     "http://localhost:5173",
-    "http://95.46.96.86",  # Add this line
+    "http://95.46.96.86",
+    "http://madeinkokand.uz"  # Add this line
 ]
 
 CORS_ALLOW_METHODS = [
@@ -123,7 +124,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://localhost:5173",
     "http://95.46.96.86",
-    
+    "http://madeinkokand.uz",
+
 ]
 # AUTH_USER_MODEL = 'account.Account'
 
