@@ -2056,15 +2056,6 @@
         "documentation": {}
     },
     {
-        "label": "CompanyViewSet",
-        "kind": 6,
-        "importPath": "apps.product.views",
-        "description": "apps.product.views",
-        "peekOfCode": "class CompanyViewSet(viewsets.ModelViewSet):\n    queryset = Company.objects.all()\n    serializer_class = CompanySerializer\n    filter_backends = [SearchFilter]\n    search_fields = ['translations__name']\nclass ProductRatingViewSet(viewsets.ModelViewSet):\n    queryset = ProductRating.objects.all().order_by(F('star').desc())\n    serializer_class = ProductRatingSerializer\nclass ApplicationViewSet(viewsets.ModelViewSet):\n    queryset = Application.objects.all()",
-        "detail": "apps.product.views",
-        "documentation": {}
-    },
-    {
         "label": "ProductRatingViewSet",
         "kind": 6,
         "importPath": "apps.product.views",
