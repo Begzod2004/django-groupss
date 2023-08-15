@@ -33,6 +33,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -141,6 +142,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://95.46.96.86",
     "http://madeinkokand.uz",
+    "https://madeinkokand.uz"
 
 ]
 # AUTH_USER_MODEL = 'account.Account'
