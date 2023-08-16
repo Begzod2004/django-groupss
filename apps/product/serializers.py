@@ -26,9 +26,18 @@ class CategorySerializer(TranslatableModelSerializer):
         serializer = SubCategorySerializer(subcategories, many=True)
         return serializer.data
     
+
+class ProductImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductImage
+        fields = '__all__'
+    
+    
 class ProductSerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Product)
     category = SubCategorySerializer(read_only=True)
+    images = ProductImageSerializer(many=True, read_only=True)
+
 
     class Meta:
         model = Product
@@ -66,10 +75,6 @@ class CompanyProductSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ProductImageSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ProductImage
-        fields = '__all__'
 
 
 class ProductRetrieveSerializer(TranslatableModelSerializer):
