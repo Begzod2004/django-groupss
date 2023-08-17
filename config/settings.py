@@ -141,8 +141,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://localhost:5173",
     "http://95.46.96.86",
-    "http://madeinkokand.uz",
-    "https://madeinkokand.uz"
+    "https://emgu.uz",
+    "http://emgu.uz"
 
 ]
 # AUTH_USER_MODEL = 'account.Account'
