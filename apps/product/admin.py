@@ -4,14 +4,14 @@ from parler.admin import TranslatableAdmin
 
 @admin.register(ProductRating)
 class ProductRatingAdmin(admin.ModelAdmin):
-    list_display = ['product', 'star', 'review_date', 'email']
+    list_display = ['name','product', 'star', 'review_date', 'email']
     list_filter = ['star']
     search_fields = ['product__name', 'email']
     list_per_page = 20
 
     fieldsets = (
         (None, {
-            'fields': ('product', 'star', 'review_comment', 'review_date', 'email'),
+            'fields': ('name','product', 'star', 'review_comment', 'review_date', 'email'),
         }),
     )
     readonly_fields = ['review_date']
@@ -51,7 +51,7 @@ class ProductAdmin(TranslatableAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('name', 'compound', 'tag', 'campany', 'category', 'is_featured', 'created_at', 'updated_at'),
+            'fields': ('name', 'compound','description', 'tag', 'campany', 'category', 'is_featured', 'created_at', 'updated_at'),
         },),
     )
 

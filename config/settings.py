@@ -286,10 +286,10 @@ JAZZMIN_UI_TWEAKS = {
 JAZZMIN_SETTINGS = {
     "topmenu_links"
     # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": "S-orca",
+    "site_title": "B2B",
 
     # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "S-orca adminstration",
+    "site_header": "B2B Admin",
 
     # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
     "site_brand": "S-orca",
@@ -308,10 +308,10 @@ JAZZMIN_SETTINGS = {
     "site_icon": None,
 
     # Welcome text on the login screen
-    "welcome_sign": "S-orca Companyga xush kelibsiz!",
+    "welcome_sign": "Welcome to B2B!",
 
     # Copyright on the footer
-    "copyright": "S-orca.uz",
+    "copyright": "B2B contributors",
 
     # # The model admin to search from the search bar, search bar omitted if excluded
     # "search_model": "myprint.Product",
