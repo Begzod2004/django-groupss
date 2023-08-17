@@ -290,7 +290,7 @@ JAZZMIN_SETTINGS = {
     "site_header": "B2B Admin",
 
     # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_brand": "S-orca",
+    "site_brand": "B2B",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
     # "site_logo": "img\logo.png",
@@ -332,14 +332,6 @@ JAZZMIN_SETTINGS = {
 
         # App with dropdown menu to all its models pages (Permissions checked against models)
         {"app": "books"},
-
-
-        {"model": "apps.about_company"},
-        {"model": "apps.order"},
-        {"model": "apps.blog"},
-        {"model": "apps.contact"},
-        {"model": "apps.blog"},
-        {"model": "apps.objects"},
     ],
     
     #############
