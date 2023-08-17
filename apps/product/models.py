@@ -62,6 +62,7 @@ class SubCategory(TranslatableModel):
 class Product(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=300, verbose_name=_('Nomi')),
+        description = models.CharField(max_length=1000, verbose_name=_('maxsulot haqida qisqacha')),
         compound = models.CharField(max_length=1000, verbose_name=_('maxsulot haqida')),
         tag = models.TextField(verbose_name=_('Tag')),
     )
@@ -90,6 +91,7 @@ class ProductImage(models.Model):
 
 
 class ProductRating(models.Model):
+    name = models.CharField(max_length=123, help_text="Nomi")
     star = models.IntegerField(default=0 , verbose_name = "star")
     product = models.ForeignKey(Product, on_delete=models.CASCADE,related_name='productreview')
     review_comment = models.TextField()
