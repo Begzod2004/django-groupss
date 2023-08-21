@@ -2,6 +2,8 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 from parler.models import TranslatableModel, TranslatedFields
+from django_countries.fields import CountryField
+
 
 class Category(TranslatableModel):
     translations = TranslatedFields(
@@ -28,13 +30,14 @@ class Company(TranslatableModel):
     name=models.CharField(max_length=300, verbose_name=_('Nomi'))
     type_product = models.ForeignKey(Category ,on_delete=models.CASCADE,  verbose_name=_('Maxsulot turi'))
     location = models.CharField(max_length=255,null=True, blank=True)
+    country = CountryField()
     image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))
     phone_number = PhoneNumberField(verbose_name=_('Phone number'))
     created_at = models.DateTimeField(auto_now_add=True)
-    facebook = models.URLField(verbose_name=_('Instagram URL'))
-    instagram = models.URLField(verbose_name=_('Instagram URL'))
-    telegram = models.URLField(verbose_name=_('Telegram URL'))
-    youtube = models.URLField(verbose_name=_('Youtube URL'))
+    facebook = models.URLField(verbose_name=_('Facebook URL'), blank=True)
+    instagram = models.URLField(verbose_name=_('Instagram URL'), blank=True)
+    telegram = models.URLField(verbose_name=_('Telegram URL'), blank=True)
+    youtube = models.URLField(verbose_name=_('YouTube URL'), blank=True)
 
     def __str__(self):
         return self.name
