@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 from parler.models import TranslatableModel, TranslatedFields
-from django_countries.fields import CountryField
+from .countries import Country
 
 
 class Category(TranslatableModel):
@@ -30,7 +30,7 @@ class Company(TranslatableModel):
     name=models.CharField(max_length=300, verbose_name=_('Nomi'))
     type_product = models.ForeignKey(Category ,on_delete=models.CASCADE,  verbose_name=_('Maxsulot turi'))
     location = models.CharField(max_length=255,null=True, blank=True)
-    country = CountryField()
+    country = models.CharField(max_length=100, choices=Country.choices)
     image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))
     phone_number = PhoneNumberField(verbose_name=_('Phone number'))
     created_at = models.DateTimeField(auto_now_add=True)
