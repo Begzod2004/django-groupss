@@ -61,7 +61,7 @@ from django.utils.html import format_html
 
 
 class CompanyAdmin(TranslatableAdmin):
-    list_display = ['name', 'type_product', 'created_at']
+    list_display = ['name', 'type_product', 'country', 'created_at']
     list_display_links = ['name']
     search_fields = ['name', 'type_product__name']
     list_per_page = 20
@@ -71,11 +71,11 @@ class CompanyAdmin(TranslatableAdmin):
     
     view_location_button.short_description = 'View Location'
 
-    list_display = ['name', 'type_product', 'created_at', 'view_location_button']
+    list_display = ['name', 'country', 'type_product', 'created_at', 'view_location_button']
     
     fieldsets = (
         (None, {
-            'fields': ('name', 'type_product', 'image', 'phone_number','description','location')
+            'fields': ('name', 'type_product', 'image', 'country','phone_number','description','location')
         }),
         ('Social Media Links', {
             'fields': ('facebook', 'instagram', 'telegram', 'youtube'),
