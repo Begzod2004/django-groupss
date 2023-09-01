@@ -5,6 +5,7 @@ from .models import Company, Product, ProductRating, CompanyProduct, Category, S
 from rest_framework import serializers
 from django.db.models import Avg , Sum, Count
 
+
 class SubCategorySerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=SubCategory)
     
@@ -43,6 +44,7 @@ class ProductSerializer(TranslatableModelSerializer):
         model = Product
         fields = '__all__'
         
+
 class CompanySerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Company)
     products = serializers.SerializerMethodField()
@@ -56,6 +58,7 @@ class CompanySerializer(TranslatableModelSerializer):
         products = Product.objects.filter(campany=instance)
         product_serializer = ProductSerializer(products, many=True)
         return product_serializer.data
+
 
 
                 
