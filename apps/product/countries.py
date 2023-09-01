@@ -16,7 +16,7 @@ class Country(models.TextChoices):
     ERITREA = 'ER', _('Eritrea')
     ESTONIA = 'EE', _('Estonia')
     ESWATINI = 'SZ', _('Eswatini')
-    ETHIOPIA = 'ET', _('Ethiopia')
+    ETHIOPIA = 'ET', _('Ethiopia')  
     FIJI = 'FJ', _('Fiji')
     FINLAND = 'FI', _('Finland')
     FRANCE = 'FR', _('France')
