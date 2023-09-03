@@ -62,7 +62,7 @@ class CompanyViewSet(viewsets.ModelViewSet):
 class ProductRatingViewSet(viewsets.ModelViewSet):
     queryset = ProductRating.objects.all().order_by(F('star').desc())
     serializer_class = ProductRatingSerializer
-    
+
 class ApplicationViewSet(viewsets.ModelViewSet):
     queryset = Application.objects.all()  
     serializer_class = ApplicationSerializer
