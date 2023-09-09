@@ -3,7 +3,6 @@ from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 from parler.models import TranslatableModel, TranslatedFields
 from .countries import Country
-from ckeditor.fields import RichTextField
 from tinymce.models import HTMLField
 
 
