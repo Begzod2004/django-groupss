@@ -69,7 +69,6 @@ class Product(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=300, verbose_name=_('Nomi')),
         description = HTMLField(),
-        compound = HTMLField(),
         tag = models.TextField(verbose_name=_('Tag')),
     )
     category = models.ForeignKey(SubCategory,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))
