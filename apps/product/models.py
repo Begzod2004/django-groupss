@@ -3,6 +3,10 @@ from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 from parler.models import TranslatableModel, TranslatedFields
 from .countries import Country
+from ckeditor.fields import RichTextField
+from tinymce.models import HTMLField
+
+
 
 
 class Category(TranslatableModel):
@@ -25,7 +29,7 @@ class Category(TranslatableModel):
 
 class Company(TranslatableModel):
     translations = TranslatedFields(
-        description = models.TextField(verbose_name=_('Qisqacha malumot'), help_text=_('Qisqacha malumot')),
+        description = HTMLField()
     )
     name=models.CharField(max_length=300, verbose_name=_('Nomi'))
     type_product = models.ForeignKey(Category ,on_delete=models.CASCADE,  verbose_name=_('Maxsulot turi'))
@@ -65,8 +69,8 @@ class SubCategory(TranslatableModel):
 class Product(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=300, verbose_name=_('Nomi')),
-        description = models.CharField(max_length=1000, verbose_name=_('maxsulot haqida qisqacha')),
-        compound = models.CharField(max_length=1000, verbose_name=_('maxsulot haqida')),
+        description = HTMLField(),
+        compound = HTMLField(),
         tag = models.TextField(verbose_name=_('Tag')),
     )
     category = models.ForeignKey(SubCategory,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))
