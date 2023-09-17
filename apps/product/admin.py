@@ -42,16 +42,15 @@ class ProductImageInline(admin.TabularInline):
 
 class ProductAdmin(TranslatableAdmin):
     inlines = [ProductImageInline]
-    list_display = ['name', 'created_at', 'is_featured', 'campany']
+    list_display = ['name', 'created_at',  'campany', 'short_description']
     list_display_links = ['name']
     search_fields = ['name',  'tag']
     list_per_page = 20
-    list_filter = ['is_featured', 'category']
-    list_editable = ['is_featured']
+    list_filter = [ 'category']
 
     fieldsets = (
         (None, {
-            'fields': ('name','description', 'tag', 'campany', 'category', 'is_featured', 'created_at', 'updated_at'),
+            'fields': ('name','description', 'tag', 'campany', 'category',  'created_at', 'updated_at' 'short_description'),
         },),
     )
 

@@ -5,9 +5,6 @@ from parler.models import TranslatableModel, TranslatedFields
 from .countries import Country
 from tinymce.models import HTMLField
 
-
-
-
 class Category(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=255, verbose_name=_('Name')),
@@ -70,12 +67,14 @@ class Product(TranslatableModel):
         name=models.CharField(max_length=300, verbose_name=_('Nomi')),
         description = HTMLField(),
         tag = models.TextField(verbose_name=_('Tag')),
+        short_description = models.TextField(verbose_name=_('short_description'), null=True , blank=True),
+
     )
+    country = models.CharField(max_length=100, choices=Country.choices)
     category = models.ForeignKey(SubCategory,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))
     campany = models.ForeignKey(Company, on_delete=models.CASCADE)
     created_at = models.DateTimeField(verbose_name=_('Created at'))
     updated_at = models.DateTimeField(verbose_name=_('Updated at'))
-    is_featured = models.BooleanField(default=False, verbose_name=_('Maxus post'))
 
     def __str__(self):
         return self.name
@@ -124,12 +123,21 @@ class CompanyProduct(models.Model):
         return f"{self.company.name} - {self.product.name}"
     
 
+TARIFLAR = (
+    (1, "Международный рынок"),
+    (2, "Европейский рынок"),
+    (3, "Азиатский рынок"),
+    (4, "Рынок Узбекистана"),
+)
+
 class Application(models.Model):
+    tariflar = models.CharField(max_length=100, choices=TARIFLAR, null=True , blank=True)
     name = models.CharField(max_length=123, help_text="Nomi")
-    lacation = models.CharField(max_length=255, help_text="davlatlar")
-    phone_number = models.CharField(max_length=100, unique=True, help_text="Telefon raqami")
+    location = models.CharField(max_length=255, help_text="davlatlar")
+    phone_number = models.CharField(max_length=100, help_text="Telefon raqami")
+    email = models.EmailField(max_length=254, null=True, blank=True, help_text="email uchun", unique=False)
     checked = models.BooleanField(default=False, help_text="Tekshirilganmi?")
-    campany_name = models.CharField(max_length=123, help_text="Kampaniya nomi")
+    company_name = models.CharField(max_length=123, help_text="Kampaniya nomi")
     date = models.DateTimeField(auto_now_add=True, help_text="Sana")
 
     class Meta:
@@ -137,18 +145,13 @@ class Application(models.Model):
         verbose_name_plural = _("So'rovlar mahsulot joylash")
 
     def __str__(self):
-        return self.name
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-
-
-
+        return self.name    
 
 class Question(models.Model):
     name = models.CharField(max_length=123, help_text="Nomi")
-    lacation = models.CharField(max_length=255, help_text="davlatlar")
-    phone_number = models.CharField(max_length=100, unique=False, help_text="Telefon raqami")
+    location = models.CharField(max_length=255, help_text="davlatlar")
+    phone_number = models.CharField(max_length=100, help_text="Telefon raqami")
+    email = models.EmailField(max_length=254, null=True, blank=True, help_text="email uchun", unique=False)
     checked = models.BooleanField(default=False, help_text="Tekshirilganmi?")
     text = models.TextField(help_text="Matn")
     date = models.DateTimeField(auto_now_add=True, help_text="Sana")
@@ -159,6 +162,3 @@ class Question(models.Model):
 
     def __str__(self):
         return self.name
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
