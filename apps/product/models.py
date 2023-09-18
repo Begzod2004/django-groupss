@@ -211,7 +211,7 @@ class SubCategory(TranslatableModel):
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.name
+        return self.name    
 
     class Meta:
         verbose_name = _('Subcategory')
@@ -226,6 +226,7 @@ class Product(TranslatableModel):
         short_description = models.TextField(verbose_name=_('short_description'), null=True , blank=True)
 
     )
+    mode_in = models.CharField(max_length=100, choices=Country.choices)
     category = models.ForeignKey(SubCategory,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))
     campany = models.ForeignKey(Company, on_delete=models.CASCADE)
     created_at = models.DateTimeField(verbose_name=_('Created at'))
@@ -279,15 +280,10 @@ class CompanyProduct(models.Model):
         return f"{self.company.name} - {self.product.name}"
     
 
-TARIFLAR = (
-    (1, "Международный рынок"),
-    (2, "Европейский рынок"),
-    (3, "Азиатский рынок"),
-    (4, "Рынок Узбекистана"),
-)
+
 
 class Application(models.Model):
-    tariflar = models.CharField(max_length=100, choices=TARIFLAR, null=True , blank=True)
+    tariflar = models.CharField(max_length=100, null=True , blank=True)
     name = models.CharField(max_length=123, help_text="Nomi")
     location = models.CharField(max_length=255, help_text="davlatlar")
     phone_number = models.CharField(max_length=100, help_text="Telefon raqami")
