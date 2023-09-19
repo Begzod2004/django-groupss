@@ -46,11 +46,11 @@ class ProductAdmin(TranslatableAdmin):
     list_display_links = ['name']
     search_fields = ['name',  'tag']
     list_per_page = 20
-    list_filter = [ 'category']
+    list_filter = [ 'category', 'mode_in']
 
     fieldsets = (
         (None, {
-            'fields': ('name','description', 'tag', 'campany', 'category',  'created_at', 'is_featured', 'updated_at', 'short_description'),
+            'fields': ('name','mode_in','description', 'tag', 'campany', 'category',  'created_at', 'is_featured', 'updated_at', 'short_description'),
         },),
     )
 

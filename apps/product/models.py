@@ -300,6 +300,7 @@ class Application(models.Model):
         return self.name    
 
 class Question(models.Model):
+    product_id = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=123, help_text="Nomi")
     location = models.CharField(max_length=255, help_text="davlatlar")
     phone_number = models.CharField(max_length=100, help_text="Telefon raqami")
