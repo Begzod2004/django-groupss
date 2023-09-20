@@ -225,7 +225,7 @@ class Product(TranslatableModel):
         name=models.CharField(max_length=300, verbose_name=_('Nomi')),
         description = HTMLField(),
         tag = models.TextField(verbose_name=_('Tag')),
-        short_description = models.TextField(verbose_name=_('short_description'), null=True , blank=True)
+        short_description = models.TextField(verbose_name=_('short_description'), null=True , blank=True , default="NEW")
 
     )
     mode_in = models.CharField(max_length=100, choices=Country.choices)
