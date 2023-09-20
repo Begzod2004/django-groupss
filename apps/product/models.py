@@ -181,7 +181,9 @@ class Category(TranslatableModel):
 
 class Company(TranslatableModel):
     translations = TranslatedFields(
-        description = HTMLField()
+        description = HTMLField(),
+        short_description = models.TextField(verbose_name=_('short_description'), null=True , blank=True)
+
     )
     name=models.CharField(max_length=300, verbose_name=_('Nomi'))
     type_product = models.ForeignKey(Category ,on_delete=models.CASCADE,  verbose_name=_('Maxsulot turi'))
