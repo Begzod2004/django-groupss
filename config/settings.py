@@ -60,8 +60,17 @@ INSTALLED_APPS = [
     # 'apps.account',
     'apps.product',
     'apps.blog',
+    'tinymce',
+
 
 ]
+
+
+TINYMCE_DEFAULT_CONFIG = {
+    'height': 360,
+    'width': 800,
+}
+
 
 LOCAL_BASE_URL = 'http://127.0.0.1:8000'
 PROD_BASE_URL = "http://emgu.uz"

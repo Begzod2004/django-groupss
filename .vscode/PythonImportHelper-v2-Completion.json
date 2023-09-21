@@ -104,6 +104,30 @@
         "documentation": {}
     },
     {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "permissions",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -505,6 +529,30 @@
         "documentation": {}
     },
     {
+        "label": "AllowAny",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "rest_framework.response",
         "description": "rest_framework.response",
@@ -706,6 +754,70 @@
     },
     {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -1061,6 +1173,14 @@
         "documentation": {}
     },
     {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
         "label": "slugify",
         "importPath": "django.utils.text",
         "description": "django.utils.text",
@@ -1150,11 +1270,53 @@
         "documentation": {}
     },
     {
+        "label": "django_countries.fields",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django_countries.fields",
+        "description": "django_countries.fields",
+        "detail": "django_countries.fields",
+        "documentation": {}
+    },
+    {
+        "label": "tinymce.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tinymce.models",
+        "description": "tinymce.models",
+        "detail": "tinymce.models",
+        "documentation": {}
+    },
+    {
+        "label": "HTMLField",
+        "importPath": "tinymce.models",
+        "description": "tinymce.models",
+        "isExtraImport": true,
+        "detail": "tinymce.models",
+        "documentation": {}
+    },
+    {
         "label": "format_html",
         "importPath": "django.utils.html",
         "description": "django.utils.html",
         "isExtraImport": true,
         "detail": "django.utils.html",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "ensure_csrf_cookie",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
         "documentation": {}
     },
     {
@@ -1171,6 +1333,14 @@
         "description": "rest_framework.filters",
         "isExtraImport": true,
         "detail": "rest_framework.filters",
+        "documentation": {}
+    },
+    {
+        "label": "method_decorator",
+        "importPath": "django.utils.decorators",
+        "description": "django.utils.decorators",
+        "isExtraImport": true,
+        "detail": "django.utils.decorators",
         "documentation": {}
     },
     {
@@ -1205,15 +1375,6 @@
         "importPath": "environ",
         "description": "environ",
         "detail": "environ",
-        "documentation": {}
-    },
-    {
-        "label": "os,",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os.",
-        "description": "os.",
-        "detail": "os.",
         "documentation": {}
     },
     {
@@ -1741,11 +1902,56 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0007_alter_application_options_alter_question_options_and_more",
+        "description": "apps.product.migrations.0007_alter_application_options_alter_question_options_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0006_application_question'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='application',\n            options={'verbose_name': \"So'rovlar mahsulot joylash\", 'verbose_name_plural': \"So'rovlar mahsulot joylash\"},\n        ),\n        migrations.AlterModelOptions(",
+        "detail": "apps.product.migrations.0007_alter_application_options_alter_question_options_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0008_company_country",
+        "description": "apps.product.migrations.0008_company_country",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0007_alter_application_options_alter_question_options_and_more'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='company',\n            name='country',\n            field=django_countries.fields.CountryField(default=1, max_length=2),\n            preserve_default=False,",
+        "detail": "apps.product.migrations.0008_company_country",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0009_alter_company_country_alter_company_facebook_and_more",
+        "description": "apps.product.migrations.0009_alter_company_country_alter_company_facebook_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0008_company_country'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='company',\n            name='country',\n            field=models.CharField(choices=[('AF', 'Afghanistan'), ('AL', 'Albania'), ('DZ', 'Algeria'), ('DK', 'Denmark'), ('DJ', 'Djibouti'), ('DM', 'Dominica'), ('DO', 'Dominican Republic'), ('EC', 'Ecuador'), ('EG', 'Egypt'), ('SV', 'El Salvador'), ('GQ', 'Equatorial Guinea'), ('ER', 'Eritrea'), ('EE', 'Estonia'), ('SZ', 'Eswatini'), ('ET', 'Ethiopia'), ('FJ', 'Fiji'), ('FI', 'Finland'), ('FR', 'France'), ('GA', 'Gabon'), ('GM', 'Gambia'), ('GE', 'Georgia'), ('DE', 'Germany'), ('GH', 'Ghana'), ('GR', 'Greece'), ('GD', 'Grenada'), ('GT', 'Guatemala'), ('GN', 'Guinea'), ('GW', 'Guinea-Bissau'), ('GY', 'Guyana'), ('HT', 'Haiti'), ('HN', 'Honduras'), ('HU', 'Hungary'), ('IS', 'Iceland'), ('IN', 'India'), ('ID', 'Indonesia'), ('IR', 'Iran'), ('IQ', 'Iraq'), ('IE', 'Ireland'), ('IL', 'Israel'), ('IT', 'Italy'), ('JM', 'Jamaica'), ('JP', 'Japan'), ('JO', 'Jordan'), ('KZ', 'Kazakhstan'), ('KE', 'Kenya'), ('KI', 'Kiribati'), ('XK', 'Kosovo'), ('KW', 'Kuwait'), ('KG', 'Kyrgyzstan'), ('LA', 'Laos'), ('LV', 'Latvia'), ('LB', 'Lebanon'), ('LS', 'Lesotho'), ('LR', 'Liberia'), ('LY', 'Libya'), ('LI', 'Liechtenstein'), ('LT', 'Lithuania'), ('LU', 'Luxembourg'), ('MG', 'Madagascar'), ('MW', 'Malawi'), ('MY', 'Malaysia'), ('MV', 'Maldives'), ('ML', 'Mali'), ('MT', 'Malta'), ('MH', 'Marshall Islands'), ('MR', 'Mauritania'), ('MU', 'Mauritius'), ('MX', 'Mexico'), ('FM', 'Micronesia'), ('MD', 'Moldova'), ('MC', 'Monaco'), ('MN', 'Mongolia'), ('ME', 'Montenegro'), ('MA', 'Morocco'), ('MZ', 'Mozambique'), ('MM', 'Myanmar'), ('NA', 'Namibia'), ('NR', 'Nauru'), ('NP', 'Nepal'), ('NL', 'Netherlands'), ('NZ', 'New Zealand'), ('NI', 'Nicaragua'), ('NE', 'Niger'), ('NG', 'Nigeria'), ('KP', 'North Korea'), ('MK', 'North Macedonia'), ('NO', 'Norway'), ('OM', 'Oman'), ('PK', 'Pakistan'), ('PW', 'Palau'), ('PS', 'Palestine'), ('PA', 'Panama'), ('PG', 'Papua New Guinea'), ('PY', 'Paraguay'), ('PE', 'Peru'), ('PH', 'Philippines'), ('PL', 'Poland'), ('PT', 'Portugal'), ('QA', 'Qatar'), ('RO', 'Romania'), ('RU', 'Russia'), ('RW', 'Rwanda'), ('KN', 'Saint Kitts and Nevis'), ('LC', 'Saint Lucia'), ('VC', 'Saint Vincent and the Grenadines'), ('WS', 'Samoa'), ('SM', 'San Marino'), ('ST', 'Sao Tome and Principe'), ('SA', 'Saudi Arabia'), ('SN', 'Senegal'), ('RS', 'Serbia'), ('SC', 'Seychelles'), ('SL', 'Sierra Leone'), ('SG', 'Singapore'), ('SK', 'Slovakia'), ('SI', 'Slovenia'), ('SB', 'Solomon Islands'), ('SO', 'Somalia'), ('ZA', 'South Africa'), ('KR', 'South Korea'), ('SS', 'South Sudan'), ('ES', 'Spain'), ('LK', 'Sri Lanka'), ('SD', 'Sudan'), ('SR', 'Suriname'), ('SE', 'Sweden'), ('CH', 'Switzerland'), ('SY', 'Syria'), ('TW', 'Taiwan'), ('TJ', 'Tajikistan'), ('TZ', 'Tanzania'), ('TH', 'Thailand'), ('TL', 'Timor-Leste'), ('TG', 'Togo'), ('TO', 'Tonga'), ('TT', 'Trinidad and Tobago'), ('TN', 'Tunisia'), ('TR', 'Turkey'), ('TM', 'Turkmenistan'), ('TV', 'Tuvalu'), ('UG', 'Uganda'), ('UA', 'Ukraine'), ('AE', 'United Arab Emirates'), ('GB', 'United Kingdom'), ('US', 'United States'), ('UY', 'Uruguay'), ('UZ', 'Uzbekistan'), ('VU', 'Vanuatu'), ('VA', 'Vatican City'), ('VE', 'Venezuela'), ('VN', 'Vietnam'), ('YE', 'Yemen'), ('ZM', 'Zambia'), ('ZW', 'Zimbabwe')], max_length=100),\n        ),",
+        "detail": "apps.product.migrations.0009_alter_company_country_alter_company_facebook_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0010_alter_companytranslation_description_and_more",
+        "description": "apps.product.migrations.0010_alter_companytranslation_description_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0009_alter_company_country_alter_company_facebook_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='companytranslation',\n            name='description',\n            field=tinymce.models.HTMLField(),\n        ),",
+        "detail": "apps.product.migrations.0010_alter_companytranslation_description_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0011_remove_producttranslation_compound",
+        "description": "apps.product.migrations.0011_remove_producttranslation_compound",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0010_alter_companytranslation_description_and_more'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='producttranslation',\n            name='compound',\n        ),\n    ]",
+        "detail": "apps.product.migrations.0011_remove_producttranslation_compound",
+        "documentation": {}
+    },
+    {
         "label": "ProductRatingAdmin",
         "kind": 6,
         "importPath": "apps.product.admin",
         "description": "apps.product.admin",
-        "peekOfCode": "class ProductRatingAdmin(admin.ModelAdmin):\n    list_display = ['product', 'star', 'review_date', 'email']\n    list_filter = ['star']\n    search_fields = ['product__name', 'email']\n    list_per_page = 20\n    fieldsets = (\n        (None, {\n            'fields': ('product', 'star', 'review_comment', 'review_date', 'email'),\n        }),\n    )",
+        "peekOfCode": "class ProductRatingAdmin(admin.ModelAdmin):\n    list_display = ['name','product', 'star', 'review_date', 'email']\n    list_filter = ['star']\n    search_fields = ['product__name', 'email']\n    list_per_page = 20\n    fieldsets = (\n        (None, {\n            'fields': ('name','product', 'star', 'review_comment', 'review_date', 'email'),\n        }),\n    )",
         "detail": "apps.product.admin",
         "documentation": {}
     },
@@ -1772,7 +1978,7 @@
         "kind": 6,
         "importPath": "apps.product.admin",
         "description": "apps.product.admin",
-        "peekOfCode": "class ProductImageInline(admin.TabularInline):\n    model = ProductImage\nclass ProductAdmin(TranslatableAdmin):\n    inlines = [ProductImageInline]\n    list_display = ['name', 'created_at', 'is_featured', 'campany']\n    list_display_links = ['name']\n    search_fields = ['name', 'compound', 'tag']\n    list_per_page = 20\n    list_filter = ['is_featured', 'category']\n    list_editable = ['is_featured']",
+        "peekOfCode": "class ProductImageInline(admin.TabularInline):\n    model = ProductImage\nclass ProductAdmin(TranslatableAdmin):\n    inlines = [ProductImageInline]\n    list_display = ['name', 'created_at', 'is_featured', 'campany']\n    list_display_links = ['name']\n    search_fields = ['name',  'tag']\n    list_per_page = 20\n    list_filter = ['is_featured', 'category']\n    list_editable = ['is_featured']",
         "detail": "apps.product.admin",
         "documentation": {}
     },
@@ -1781,7 +1987,7 @@
         "kind": 6,
         "importPath": "apps.product.admin",
         "description": "apps.product.admin",
-        "peekOfCode": "class ProductAdmin(TranslatableAdmin):\n    inlines = [ProductImageInline]\n    list_display = ['name', 'created_at', 'is_featured', 'campany']\n    list_display_links = ['name']\n    search_fields = ['name', 'compound', 'tag']\n    list_per_page = 20\n    list_filter = ['is_featured', 'category']\n    list_editable = ['is_featured']\n    fieldsets = (\n        (None, {",
+        "peekOfCode": "class ProductAdmin(TranslatableAdmin):\n    inlines = [ProductImageInline]\n    list_display = ['name', 'created_at', 'is_featured', 'campany']\n    list_display_links = ['name']\n    search_fields = ['name',  'tag']\n    list_per_page = 20\n    list_filter = ['is_featured', 'category']\n    list_editable = ['is_featured']\n    fieldsets = (\n        (None, {",
         "detail": "apps.product.admin",
         "documentation": {}
     },
@@ -1790,7 +1996,7 @@
         "kind": 6,
         "importPath": "apps.product.admin",
         "description": "apps.product.admin",
-        "peekOfCode": "class CompanyAdmin(TranslatableAdmin):\n    list_display = ['name', 'type_product', 'created_at']\n    list_display_links = ['name']\n    search_fields = ['name', 'type_product__name']\n    list_per_page = 20\n    def view_location_button(self, obj):\n        return format_html('<a href=\"https://maps.google.com/?q={}\" target=\"_blank\">View Location</a>', obj.location)\n    view_location_button.short_description = 'View Location'\n    list_display = ['name', 'type_product', 'created_at', 'view_location_button']\n    fieldsets = (",
+        "peekOfCode": "class CompanyAdmin(TranslatableAdmin):\n    list_display = ['name', 'type_product', 'country', 'created_at']\n    list_display_links = ['name']\n    search_fields = ['name', 'type_product__name']\n    list_per_page = 20\n    def view_location_button(self, obj):\n        return format_html('<a href=\"https://maps.google.com/?q={}\" target=\"_blank\">View Location</a>', obj.location)\n    view_location_button.short_description = 'View Location'\n    list_display = ['name', 'country', 'type_product', 'created_at', 'view_location_button']\n    fieldsets = (",
         "detail": "apps.product.admin",
         "documentation": {}
     },
@@ -1831,6 +2037,15 @@
         "documentation": {}
     },
     {
+        "label": "Country",
+        "kind": 6,
+        "importPath": "apps.product.countries",
+        "description": "apps.product.countries",
+        "peekOfCode": "class Country(models.TextChoices):\n    AFGHANISTAN = 'AF', _('Afghanistan')\n    ALBANIA = 'AL', _('Albania')\n    ALGERIA = 'DZ', _('Algeria')\n    DENMARK = 'DK', _('Denmark')\n    DJIBOUTI = 'DJ', _('Djibouti')\n    DOMINICA = 'DM', _('Dominica')\n    DOMINICAN_REPUBLIC = 'DO', _('Dominican Republic')\n    ECUADOR = 'EC', _('Ecuador')\n    EGYPT = 'EG', _('Egypt')",
+        "detail": "apps.product.countries",
+        "documentation": {}
+    },
+    {
         "label": "ProductFilter",
         "kind": 6,
         "importPath": "apps.product.filters",
@@ -1853,7 +2068,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Company(TranslatableModel):\n    translations = TranslatedFields(\n        description = models.TextField(verbose_name=_('Qisqacha malumot'), help_text=_('Qisqacha malumot')),\n    )\n    name=models.CharField(max_length=300, verbose_name=_('Nomi'))\n    type_product = models.ForeignKey(Category ,on_delete=models.CASCADE,  verbose_name=_('Maxsulot turi'))\n    location = models.CharField(max_length=255,null=True, blank=True)\n    image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))\n    phone_number = PhoneNumberField(verbose_name=_('Phone number'))\n    created_at = models.DateTimeField(auto_now_add=True)",
+        "peekOfCode": "class Company(TranslatableModel):\n    translations = TranslatedFields(\n        description = HTMLField()\n    )\n    name=models.CharField(max_length=300, verbose_name=_('Nomi'))\n    type_product = models.ForeignKey(Category ,on_delete=models.CASCADE,  verbose_name=_('Maxsulot turi'))\n    location = models.CharField(max_length=255,null=True, blank=True)\n    country = models.CharField(max_length=100, choices=Country.choices)\n    image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))\n    phone_number = PhoneNumberField(verbose_name=_('Phone number'))",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1871,7 +2086,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Product(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=300, verbose_name=_('Nomi')),\n        compound = models.CharField(max_length=1000, verbose_name=_('maxsulot haqida')),\n        tag = models.TextField(verbose_name=_('Tag')),\n    )\n    category = models.ForeignKey(SubCategory,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))\n    campany = models.ForeignKey(Company, on_delete=models.CASCADE)\n    created_at = models.DateTimeField(verbose_name=_('Created at'))\n    updated_at = models.DateTimeField(verbose_name=_('Updated at'))",
+        "peekOfCode": "class Product(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=300, verbose_name=_('Nomi')),\n        description = HTMLField(),\n        tag = models.TextField(verbose_name=_('Tag')),\n    )\n    category = models.ForeignKey(SubCategory,on_delete=models.CASCADE,  verbose_name=_('Kategorylari'))\n    campany = models.ForeignKey(Company, on_delete=models.CASCADE)\n    created_at = models.DateTimeField(verbose_name=_('Created at'))\n    updated_at = models.DateTimeField(verbose_name=_('Updated at'))",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1880,7 +2095,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class ProductImage(models.Model):\n    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')\n    image = models.ImageField(upload_to='product_images')\n    def __str__(self):\n        return f\"Image for {self.product.name}\"\nclass ProductRating(models.Model):\n    star = models.IntegerField(default=0 , verbose_name = \"star\")\n    product = models.ForeignKey(Product, on_delete=models.CASCADE,related_name='productreview')\n    review_comment = models.TextField()\n    review_date = models.DateTimeField(auto_now_add=True, verbose_name='review_created_date')",
+        "peekOfCode": "class ProductImage(models.Model):\n    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')\n    image = models.ImageField(upload_to='product_images')\n    def __str__(self):\n        return f\"Image for {self.product.name}\"\nclass ProductRating(models.Model):\n    name = models.CharField(max_length=123, help_text=\"Nomi\")\n    star = models.IntegerField(default=0 , verbose_name = \"star\")\n    product = models.ForeignKey(Product, on_delete=models.CASCADE,related_name='productreview')\n    review_comment = models.TextField()",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1889,7 +2104,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class ProductRating(models.Model):\n    star = models.IntegerField(default=0 , verbose_name = \"star\")\n    product = models.ForeignKey(Product, on_delete=models.CASCADE,related_name='productreview')\n    review_comment = models.TextField()\n    review_date = models.DateTimeField(auto_now_add=True, verbose_name='review_created_date')\n    email = models.EmailField()\n    class Meta:\n        verbose_name = _('Product Rating')\n        verbose_name_plural = _('Product Ratings')\n    def __str__(self):",
+        "peekOfCode": "class ProductRating(models.Model):\n    name = models.CharField(max_length=123, help_text=\"Nomi\")\n    star = models.IntegerField(default=0 , verbose_name = \"star\")\n    product = models.ForeignKey(Product, on_delete=models.CASCADE,related_name='productreview')\n    review_comment = models.TextField()\n    review_date = models.DateTimeField(auto_now_add=True, verbose_name='review_created_date')\n    email = models.EmailField()\n    class Meta:\n        verbose_name = _('Product Rating')\n        verbose_name_plural = _('Product Ratings')",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1939,11 +2154,20 @@
         "documentation": {}
     },
     {
+        "label": "ProductImageSerializer",
+        "kind": 6,
+        "importPath": "apps.product.serializers",
+        "description": "apps.product.serializers",
+        "peekOfCode": "class ProductImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProductImage\n        fields = '__all__'\nclass ProductSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    category = SubCategorySerializer(read_only=True)\n    images = ProductImageSerializer(many=True, read_only=True)\n    class Meta:\n        model = Product",
+        "detail": "apps.product.serializers",
+        "documentation": {}
+    },
+    {
         "label": "ProductSerializer",
         "kind": 6,
         "importPath": "apps.product.serializers",
         "description": "apps.product.serializers",
-        "peekOfCode": "class ProductSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    category = SubCategorySerializer(read_only=True)\n    class Meta:\n        model = Product\n        fields = '__all__'\nclass CompanySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Company)\n    products = serializers.SerializerMethodField()\n    type_product = CategorySerializer(read_only=True)",
+        "peekOfCode": "class ProductSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    category = SubCategorySerializer(read_only=True)\n    images = ProductImageSerializer(many=True, read_only=True)\n    class Meta:\n        model = Product\n        fields = '__all__'\nclass CompanySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Company)\n    products = serializers.SerializerMethodField()",
         "detail": "apps.product.serializers",
         "documentation": {}
     },
@@ -1970,16 +2194,7 @@
         "kind": 6,
         "importPath": "apps.product.serializers",
         "description": "apps.product.serializers",
-        "peekOfCode": "class CompanyProductSerializer(serializers.ModelSerializer):\n    company = CompanySerializer()  # Capitalized field name\n    product = ProductSerializer()  # Capitalized field name\n    class Meta:\n        model = CompanyProduct\n        fields = '__all__'\nclass ProductImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProductImage\n        fields = '__all__'",
-        "detail": "apps.product.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "ProductImageSerializer",
-        "kind": 6,
-        "importPath": "apps.product.serializers",
-        "description": "apps.product.serializers",
-        "peekOfCode": "class ProductImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProductImage\n        fields = '__all__'\nclass ProductRetrieveSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    product_reviews = serializers.SerializerMethodField()\n    average_rating = serializers.SerializerMethodField()\n    category = SubCategorySerializer(read_only=True)\n    images = ProductImageSerializer(many=True, read_only=True)",
+        "peekOfCode": "class CompanyProductSerializer(serializers.ModelSerializer):\n    company = CompanySerializer()  # Capitalized field name\n    product = ProductSerializer()  # Capitalized field name\n    class Meta:\n        model = CompanyProduct\n        fields = '__all__'\nclass ProductRetrieveSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Product)\n    product_reviews = serializers.SerializerMethodField()\n    average_rating = serializers.SerializerMethodField()",
         "detail": "apps.product.serializers",
         "documentation": {}
     },
@@ -2024,8 +2239,17 @@
         "kind": 5,
         "importPath": "apps.product.urls",
         "description": "apps.product.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', include(router.urls)),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', include(router.urls)),\n    path('get-csrf-token/', GetCSRFToken.as_view(), name='get-csrf-token'),  # Include the GetCSRFToken view separately\n]",
         "detail": "apps.product.urls",
+        "documentation": {}
+    },
+    {
+        "label": "GetCSRFToken",
+        "kind": 6,
+        "importPath": "apps.product.views",
+        "description": "apps.product.views",
+        "peekOfCode": "class GetCSRFToken(views.APIView):\n    permission_classes = [AllowAny, ]\n    @method_decorator(ensure_csrf_cookie)\n    def get(self, request, format=None):\n        return Response(\"Success\")\nclass CategoryViewSet(viewsets.ModelViewSet):\n    queryset = Category.objects.all()\n    serializer_class = CategorySerializer\n    http_method_names = ['get', 'head', 'options']\nclass SubCategoryViewSet(viewsets.ModelViewSet):",
+        "detail": "apps.product.views",
         "documentation": {}
     },
     {
@@ -2056,11 +2280,20 @@
         "documentation": {}
     },
     {
+        "label": "CompanyViewSet",
+        "kind": 6,
+        "importPath": "apps.product.views",
+        "description": "apps.product.views",
+        "peekOfCode": "class CompanyViewSet(viewsets.ModelViewSet):\n    queryset = Company.objects.all()\n    serializer_class = CompanySerializer\n    filter_backends = [SearchFilter]\n    search_fields = ['translations__name']\nclass ProductRatingViewSet(viewsets.ModelViewSet):\n    queryset = ProductRating.objects.all().order_by(F('star').desc())\n    serializer_class = ProductRatingSerializer\nclass ApplicationViewSet(viewsets.ModelViewSet):\n    queryset = Application.objects.all()  ",
+        "detail": "apps.product.views",
+        "documentation": {}
+    },
+    {
         "label": "ProductRatingViewSet",
         "kind": 6,
         "importPath": "apps.product.views",
         "description": "apps.product.views",
-        "peekOfCode": "class ProductRatingViewSet(viewsets.ModelViewSet):\n    queryset = ProductRating.objects.all().order_by(F('star').desc())\n    serializer_class = ProductRatingSerializer\nclass ApplicationViewSet(viewsets.ModelViewSet):\n    queryset = Application.objects.all()\n    serializer_class = ApplicationSerializer\nclass QuestionViewSet(viewsets.ModelViewSet):\n    queryset = Question.objects.all()\n    serializer_class = QuestionSerializer",
+        "peekOfCode": "class ProductRatingViewSet(viewsets.ModelViewSet):\n    queryset = ProductRating.objects.all().order_by(F('star').desc())\n    serializer_class = ProductRatingSerializer\nclass ApplicationViewSet(viewsets.ModelViewSet):\n    queryset = Application.objects.all()  \n    serializer_class = ApplicationSerializer\nclass QuestionViewSet(viewsets.ModelViewSet):\n    queryset = Question.objects.all()\n    serializer_class = QuestionSerializer",
         "detail": "apps.product.views",
         "documentation": {}
     },
@@ -2069,7 +2302,7 @@
         "kind": 6,
         "importPath": "apps.product.views",
         "description": "apps.product.views",
-        "peekOfCode": "class ApplicationViewSet(viewsets.ModelViewSet):\n    queryset = Application.objects.all()\n    serializer_class = ApplicationSerializer\nclass QuestionViewSet(viewsets.ModelViewSet):\n    queryset = Question.objects.all()\n    serializer_class = QuestionSerializer",
+        "peekOfCode": "class ApplicationViewSet(viewsets.ModelViewSet):\n    queryset = Application.objects.all()  \n    serializer_class = ApplicationSerializer\nclass QuestionViewSet(viewsets.ModelViewSet):\n    queryset = Question.objects.all()\n    serializer_class = QuestionSerializer",
         "detail": "apps.product.views",
         "documentation": {}
     },
@@ -2146,11 +2379,11 @@
         "documentation": {}
     },
     {
-        "label": "REST_FRAMEWORK",
+        "label": "TINYMCE_DEFAULT_CONFIG",
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',\n        'rest_framework.authentication.SessionAuthentication',\n        'rest_framework.authentication.TokenAuthentication',\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n}\nLOCAL_BASE_URL = 'http://127.0.0.1:8000'\nPROD_BASE_URL = 'http://localhost:5173'",
+        "peekOfCode": "TINYMCE_DEFAULT_CONFIG = {\n    'height': 360,\n    'width': 800,\n}\nLOCAL_BASE_URL = 'http://127.0.0.1:8000'\nPROD_BASE_URL = \"http://emgu.uz\"\n# PROD_BASE_URL = 'https://w4.citynet.uz:4441'\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'corsheaders.middleware.CorsMiddleware',",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2159,7 +2392,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "LOCAL_BASE_URL = 'http://127.0.0.1:8000'\nPROD_BASE_URL = 'http://localhost:5173'\n# PROD_BASE_URL = 'https://w4.citynet.uz:4441'\nMIDDLEWARE = [\n    \"corsheaders.middleware.CorsMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',",
+        "peekOfCode": "LOCAL_BASE_URL = 'http://127.0.0.1:8000'\nPROD_BASE_URL = \"http://emgu.uz\"\n# PROD_BASE_URL = 'https://w4.citynet.uz:4441'\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2168,7 +2401,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "PROD_BASE_URL = 'http://localhost:5173'\n# PROD_BASE_URL = 'https://w4.citynet.uz:4441'\nMIDDLEWARE = [\n    \"corsheaders.middleware.CorsMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
+        "peekOfCode": "PROD_BASE_URL = \"http://emgu.uz\"\n# PROD_BASE_URL = 'https://w4.citynet.uz:4441'\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2177,16 +2410,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    \"corsheaders.middleware.CorsMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
-        "detail": "config.settings",
-        "documentation": {}
-    },
-    {
-        "label": "PARLER_LANGUAGES",
-        "kind": 5,
-        "importPath": "config.settings",
-        "description": "config.settings",
-        "peekOfCode": "PARLER_LANGUAGES = {\n    None: (\n        {'code': 'en', 'name': 'English'},\n        {'code': 'ru', 'name': 'Russion'},\n        {'code': 'uz', 'name': 'Uzbek'},\n    ),\n    'default': {\n        'fallbacks': ['en', 'ru', 'uz'],\n        'hide_untranslated': False,\n    }",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2195,7 +2419,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    \"http://127.0.0.1:3000\",\n    \"http://localhost:3000\",\n    \"http://localhost:5173\",  # Add this line\n]\nCORS_ALLOW_METHODS = [\n    '*'\n]\nCORS_ALLOW_HEADERS = [\n    '*'",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',  # Replace with the actual origin of your frontend application\n]\nCORS_ALLOW_METHODS = [\n    'GET',\n    'POST',\n    'PUT',\n    'PATCH',\n    'DELETE',\n    'OPTIONS',",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2204,7 +2428,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "CORS_ALLOW_METHODS = [\n    '*'\n]\nCORS_ALLOW_HEADERS = [\n    '*'\n]\nCORS_ALLOW_CREDENTIALS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"http://127.0.0.1:5173\",\n    \"http://localhost:5173\",",
+        "peekOfCode": "CORS_ALLOW_METHODS = [\n    'GET',\n    'POST',\n    'PUT',\n    'PATCH',\n    'DELETE',\n    'OPTIONS',\n]\nCORS_ALLOW_HEADERS = [\n    'Accept',",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2213,7 +2437,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "CORS_ALLOW_HEADERS = [\n    '*'\n]\nCORS_ALLOW_CREDENTIALS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"http://127.0.0.1:5173\",\n    \"http://localhost:5173\",\n]\n# AUTH_USER_MODEL = 'account.Account'\nLOGIN_REDIRECT_URL = '/'",
+        "peekOfCode": "CORS_ALLOW_HEADERS = [\n    'Accept',\n    'Accept-Language',\n    'Content-Type',\n    'Authorization',\n]\nCORS_ALLOW_CREDENTIALS = True\n# Django REST framework\n# http://www.django-rest-framework.org/api-guide/settings/\nROOT_URLCONF = 'config.urls'",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2222,34 +2446,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "CORS_ALLOW_CREDENTIALS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"http://127.0.0.1:5173\",\n    \"http://localhost:5173\",\n]\n# AUTH_USER_MODEL = 'account.Account'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nROOT_URLCONF = 'config.urls'\nTEMPLATES = [",
-        "detail": "config.settings",
-        "documentation": {}
-    },
-    {
-        "label": "CSRF_TRUSTED_ORIGINS",
-        "kind": 5,
-        "importPath": "config.settings",
-        "description": "config.settings",
-        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    \"http://127.0.0.1:5173\",\n    \"http://localhost:5173\",\n]\n# AUTH_USER_MODEL = 'account.Account'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nROOT_URLCONF = 'config.urls'\nTEMPLATES = [\n    {",
-        "detail": "config.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LOGIN_REDIRECT_URL",
-        "kind": 5,
-        "importPath": "config.settings",
-        "description": "config.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nROOT_URLCONF = 'config.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [",
-        "detail": "config.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LOGOUT_REDIRECT_URL",
-        "kind": 5,
-        "importPath": "config.settings",
-        "description": "config.settings",
-        "peekOfCode": "LOGOUT_REDIRECT_URL = '/'\nROOT_URLCONF = 'config.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',",
+        "peekOfCode": "CORS_ALLOW_CREDENTIALS = True\n# Django REST framework\n# http://www.django-rest-framework.org/api-guide/settings/\nROOT_URLCONF = 'config.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2276,7 +2473,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'config.wsgi.application'\nimport os, dj_database_url\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\n# DATABASES = {\n#     'default': dj_database_url.parse(env('DATABASE_URL'))\n#     }\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',",
+        "peekOfCode": "WSGI_APPLICATION = 'config.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\n# DATABASES = {\n#     'default': dj_database_url.parse(env('DATABASE_URL'))\n#     }\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': 'mydatabase',",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2303,7 +2500,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'Asia/Tashkent'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static'",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2312,7 +2509,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "TIME_ZONE = 'Asia/Tashkent'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static'",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static'\n]",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2321,16 +2518,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static'\n]",
-        "detail": "config.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_L10N",
-        "kind": 5,
-        "importPath": "config.settings",
-        "description": "config.settings",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static'\n]\nMEDIA_URL = 'media/'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static'\n]\nMEDIA_URL = 'media/'",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2348,7 +2536,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static'\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static'\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nCORS_ORIGIN_ALLOW_ALL = True",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2357,7 +2545,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static'\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static'\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nCORS_ORIGIN_ALLOW_ALL = True\nCSRF_TRUSTED_ORIGINS = [\"https://emgu.uz\", \"http://emgu.uz\",]",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2366,7 +2554,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / 'static'\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / 'static'\n]\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nCORS_ORIGIN_ALLOW_ALL = True\nCSRF_TRUSTED_ORIGINS = [\"https://emgu.uz\", \"http://emgu.uz\",]\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2375,7 +2563,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',",
+        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nCORS_ORIGIN_ALLOW_ALL = True\nCSRF_TRUSTED_ORIGINS = [\"https://emgu.uz\", \"http://emgu.uz\",]\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2384,7 +2572,25 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header'",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nCORS_ORIGIN_ALLOW_ALL = True\nCSRF_TRUSTED_ORIGINS = [\"https://emgu.uz\", \"http://emgu.uz\",]\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.BasicAuthentication',",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ORIGIN_ALLOW_ALL",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "CORS_ORIGIN_ALLOW_ALL = True\nCSRF_TRUSTED_ORIGINS = [\"https://emgu.uz\", \"http://emgu.uz\",]\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.BasicAuthentication',\n        'rest_framework.authentication.TokenAuthentication',\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_TRUSTED_ORIGINS",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\"https://emgu.uz\", \"http://emgu.uz\",]\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.BasicAuthentication',\n        'rest_framework.authentication.TokenAuthentication',\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n}",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2393,16 +2599,52 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header'\n        }\n    }\n}",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.BasicAuthentication',\n        'rest_framework.authentication.TokenAuthentication',\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n}\nSPECTACULAR_SETTINGS = {",
         "detail": "config.settings",
         "documentation": {}
     },
     {
-        "label": "SWAGGER_SETTINGS",
+        "label": "STATIC_ROOT",
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "SWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header'\n        }\n    }\n}\nJAZZMIN_UI_TWEAKS = {",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.BasicAuthentication',\n        'rest_framework.authentication.TokenAuthentication',\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n}\nSPECTACULAR_SETTINGS = {\n    'COMPONENT_SPLIT_REQUEST': True,",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework.authentication.BasicAuthentication',\n        'rest_framework.authentication.TokenAuthentication',\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n}\nSPECTACULAR_SETTINGS = {\n    'COMPONENT_SPLIT_REQUEST': True,\n}",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SPECTACULAR_SETTINGS",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "SPECTACULAR_SETTINGS = {\n    'COMPONENT_SPLIT_REQUEST': True,\n}\nPARLER_LANGUAGES = {\n    None: (\n        {'code': 'uz'},\n        {'code': 'en'},\n        {'code': 'ru'},\n    ),\n    'default': {",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "PARLER_LANGUAGES",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "PARLER_LANGUAGES = {\n    None: (\n        {'code': 'uz'},\n        {'code': 'en'},\n        {'code': 'ru'},\n    ),\n    'default': {\n        'fallbacks': ['uz', 'en', 'ru'],\n        'hide_untranslated': False,\n    }",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "SIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),\n    'REFRESH_TOKEN_LIFETIME': timedelta(days=10),\n    'ROTATE_REFRESH_TOKENS': False,\n    'BLACKLIST_AFTER_ROTATION': False,\n    'UPDATE_LAST_LOGIN': False,\n    'ALGORITHM': 'HS256',\n    'SIGNING_KEY': SECRET_KEY,\n    'VERIFYING_KEY': None,\n    'AUDIENCE': None,",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2420,7 +2662,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "JAZZMIN_SETTINGS = {\n    \"topmenu_links\"\n    # title of the window (Will default to current_admin_site.site_title if absent or None)\n    \"site_title\": \"S-orca\",\n    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)\n    \"site_header\": \"S-orca adminstration\",\n    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)\n    \"site_brand\": \"S-orca\",\n    # Logo to use for your site, must be present in static files, used for brand on top left\n    # \"site_logo\": \"img\\logo.png\",",
+        "peekOfCode": "JAZZMIN_SETTINGS = {\n    \"topmenu_links\"\n    # title of the window (Will default to current_admin_site.site_title if absent or None)\n    \"site_title\": \"B2B\",\n    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)\n    \"site_header\": \"B2B Admin\",\n    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)\n    \"site_brand\": \"B2B\",\n    # Logo to use for your site, must be present in static files, used for brand on top left\n    # \"site_logo\": \"img\\logo.png\",",
         "detail": "config.settings",
         "documentation": {}
     },
