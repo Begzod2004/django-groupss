@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'parler',
 
     # local
-    # 'apps.home',
+    'apps.home',
     # 'apps.account',
     'apps.product',
     'apps.blog',
@@ -141,21 +141,21 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'mydatabase',
+#     }
+# }
 
 
 

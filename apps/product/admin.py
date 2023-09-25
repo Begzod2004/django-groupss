@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import Company, Category, Product, ProductRating, CompanyProduct, SubCategory,ProductImage , Application, Question
+from .models import Company, Category, Product, ProductRating, SubCategory, ProductImage , Application, Question 
 from parler.admin import TranslatableAdmin
+from django.utils.html import format_html
+
 
 @admin.register(ProductRating)
 class ProductRatingAdmin(admin.ModelAdmin):
@@ -15,11 +17,6 @@ class ProductRatingAdmin(admin.ModelAdmin):
         }),
     )
     readonly_fields = ['review_date']
-
-@admin.register(CompanyProduct)
-class CompanyProductAdmin(admin.ModelAdmin):
-    list_display = ['company', 'product']
-    search_fields = ['company__name', 'product__name']
 
 
 class CategoryAdmin(TranslatableAdmin):
@@ -36,13 +33,14 @@ class CategoryAdmin(TranslatableAdmin):
 admin.site.register(Category, CategoryAdmin)
 
 
+
 class ProductImageInline(admin.TabularInline):
     model = ProductImage
 
 
 class ProductAdmin(TranslatableAdmin):
     inlines = [ProductImageInline]
-    list_display = ['name', 'created_at',  'campany', 'short_description', 'is_featured']
+    list_display = ['name', 'created_at',  'company', 'short_description', 'is_featured']
     list_display_links = ['name']
     search_fields = ['name',  'tag']
     list_per_page = 20
@@ -50,13 +48,11 @@ class ProductAdmin(TranslatableAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('name','mode_in','description', 'tag', 'campany', 'category',  'created_at', 'is_featured', 'updated_at', 'short_description'),
+            'fields': ('name','mode_in','description', 'tag', 'company', 'category',  'created_at', 'is_featured', 'updated_at', 'short_description'),
         },),
     )
 
 admin.site.register(Product, ProductAdmin)
-
-from django.utils.html import format_html
 
 
 class CompanyAdmin(TranslatableAdmin):
@@ -74,7 +70,7 @@ class CompanyAdmin(TranslatableAdmin):
     
     fieldsets = (
         (None, {
-            'fields': ('name', 'type_product', 'image', 'country','phone_number','description', 'short_description', 'location')
+            'fields': ('name', 'type_product','type_position', 'image', 'country','phone_number','description', 'short_description', 'location')
         }),
         ('Social Media Links', {
             'fields': ('facebook', 'instagram', 'telegram', 'youtube'),
@@ -84,7 +80,7 @@ class CompanyAdmin(TranslatableAdmin):
     
     readonly_fields = ['created_at']
 
-
+admin.site.register(Company, CompanyAdmin)
 
 
 class SubCategoryAdmin(TranslatableAdmin):
@@ -101,11 +97,10 @@ class SubCategoryAdmin(TranslatableAdmin):
     )
 
 admin.site.register(SubCategory, SubCategoryAdmin)
-admin.site.register(Company, CompanyAdmin)
 
 
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ['name', 'phone_number', 'display_checked', 'date']
+    list_display = ['name', 'phone_number', 'display_checked', 'date', 'tarif']
     list_filter = ['checked']
     search_fields = ['name', 'phone_number']
     list_per_page = 50

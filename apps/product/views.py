@@ -4,28 +4,17 @@ from requests import Response
 from rest_framework import viewsets, filters
 from rest_framework.response import Response
 
-from .serializers import CompanySerializer, ProductSerializer, ProductRatingSerializer, ProductRetrieveSerializer, SubCategorySerializer, ApplicationSerializer, QuestionSerializer
-from .models import Company, Product, ProductRating, SubCategory, Application, Question
+from .serializers import CompanySerializer, ProductSerializer, ProductRatingSerializer, ProductRetrieveSerializer, SubCategorySerializer, ApplicationSerializer, QuestionSerializer, GetProductSerializer, PositionSerializer
+from .models import Company, Product, ProductRating, SubCategory, Application, Question , Position
 from .filters import ProductFilter
 from rest_framework.filters import SearchFilter
 from .models import Category
-from rest_framework import viewsets, status
+from rest_framework import viewsets
 from django.db.models import F
 from .serializers import CategorySerializer
-from rest_framework import views
-from rest_framework.response import Response
-from rest_framework.permissions import AllowAny
-from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import ensure_csrf_cookie
-
-class GetCSRFToken(views.APIView):
-    permission_classes = [AllowAny, ]
-
-    @method_decorator(ensure_csrf_cookie)
-    def get(self, request, format=None):
-        return Response("Success")
-
-
+from .filters import ProductFilter  # Filterni import qiling
+from django.http import JsonResponse
+from django_filters.rest_framework import DjangoFilterBackend
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
@@ -37,7 +26,10 @@ class SubCategoryViewSet(viewsets.ModelViewSet):
     queryset = SubCategory.objects.all()
     serializer_class = SubCategorySerializer
 
-    # Add any additional custom actions or methods related to the Category model here
+class PositionViewSet(viewsets.ModelViewSet):
+    queryset = Position.objects.all()
+    serializer_class = PositionSerializer
+
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all().order_by('-updated_at')
@@ -45,13 +37,36 @@ class ProductViewSet(viewsets.ModelViewSet):
     http_method_names = ['get', 'head', 'options']
     filterset_class = ProductFilter
     filter_backends = [SearchFilter]
-    search_fields = ['translations__name'] # Add this line
+    search_fields = ['translations__name', 'translations__description'] # Add this line
     ordering_fields = ['created_at', 'name', 'type_product']
 
     def get_serializer_class(self):
         if self.action == 'retrieve':
             return ProductRetrieveSerializer
         return super().get_serializer_class()
+
+
+class GetFilterProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = GetProductSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['translations__name']      #'translations__description'
+    ordering_fields = ['created_at', 'name', 'type_product']
+
+    def get_queryset(self):
+        # Get the search query from the request
+        search_query = self.request.GET.get('search', '')
+
+        # Perform the search and select related company data
+        queryset = Product.objects.filter(translations__name__icontains=search_query).select_related('company')
+
+        return queryset
+    
+    def get_serializer_class(self):
+        if self.action == 'retrieve':
+            return ProductRetrieveSerializer
+        return super().get_serializer_class()
+
 
 class CompanyViewSet(viewsets.ModelViewSet):
     queryset = Company.objects.all()
