@@ -72,6 +72,30 @@
         "documentation": {}
     },
     {
+        "label": "routers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "serializers",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -313,6 +337,22 @@
     },
     {
         "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -681,7 +721,7 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -690,6 +730,14 @@
     },
     {
         "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -857,14 +905,6 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
         "label": "django.db.models.deletion",
         "kind": 6,
         "isExtraImport": true,
@@ -924,35 +964,19 @@
         "documentation": {}
     },
     {
-        "label": "Category",
-        "importPath": "apps.blog.models",
-        "description": "apps.blog.models",
+        "label": "TranslatableModel",
+        "importPath": "parler.models",
+        "description": "parler.models",
         "isExtraImport": true,
-        "detail": "apps.blog.models",
+        "detail": "parler.models",
         "documentation": {}
     },
     {
-        "label": "Post",
-        "importPath": "apps.blog.models",
-        "description": "apps.blog.models",
+        "label": "TranslatedFields",
+        "importPath": "parler.models",
+        "description": "parler.models",
         "isExtraImport": true,
-        "detail": "apps.blog.models",
-        "documentation": {}
-    },
-    {
-        "label": "Post",
-        "importPath": "apps.blog.models",
-        "description": "apps.blog.models",
-        "isExtraImport": true,
-        "detail": "apps.blog.models",
-        "documentation": {}
-    },
-    {
-        "label": "Category",
-        "importPath": "apps.blog.models",
-        "description": "apps.blog.models",
-        "isExtraImport": true,
-        "detail": "apps.blog.models",
+        "detail": "parler.models",
         "documentation": {}
     },
     {
@@ -969,6 +993,46 @@
         "description": "apps.blog.models",
         "isExtraImport": true,
         "detail": "apps.blog.models",
+        "documentation": {}
+    },
+    {
+        "label": "Post",
+        "importPath": "apps.blog.models",
+        "description": "apps.blog.models",
+        "isExtraImport": true,
+        "detail": "apps.blog.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "apps.blog.models",
+        "description": "apps.blog.models",
+        "isExtraImport": true,
+        "detail": "apps.blog.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "apps.blog.models",
+        "description": "apps.blog.models",
+        "isExtraImport": true,
+        "detail": "apps.blog.models",
+        "documentation": {}
+    },
+    {
+        "label": "Post",
+        "importPath": "apps.blog.models",
+        "description": "apps.blog.models",
+        "isExtraImport": true,
+        "detail": "apps.blog.models",
+        "documentation": {}
+    },
+    {
+        "label": "TranslatableAdmin",
+        "importPath": "parler.admin",
+        "description": "parler.admin",
+        "isExtraImport": true,
+        "detail": "parler.admin",
         "documentation": {}
     },
     {
@@ -1054,6 +1118,14 @@
         "documentation": {}
     },
     {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
         "label": "slugify",
         "importPath": "django.utils.text",
         "description": "django.utils.text",
@@ -1075,6 +1147,22 @@
         "description": "parler_rest.serializers",
         "isExtraImport": true,
         "detail": "parler_rest.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TranslatableModelSerializer",
+        "importPath": "parler_rest.serializers",
+        "description": "parler_rest.serializers",
+        "isExtraImport": true,
+        "detail": "parler_rest.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TranslatedFieldsField",
+        "importPath": "parler_rest.fields",
+        "description": "parler_rest.fields",
+        "isExtraImport": true,
+        "detail": "parler_rest.fields",
         "documentation": {}
     },
     {
@@ -1126,11 +1214,35 @@
         "documentation": {}
     },
     {
+        "label": "format_html",
+        "importPath": "django.utils.html",
+        "description": "django.utils.html",
+        "isExtraImport": true,
+        "detail": "django.utils.html",
+        "documentation": {}
+    },
+    {
+        "label": "format_html",
+        "importPath": "django.utils.html",
+        "description": "django.utils.html",
+        "isExtraImport": true,
+        "detail": "django.utils.html",
+        "documentation": {}
+    },
+    {
         "label": "phonenumber_field.modelfields",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "phonenumber_field.modelfields",
         "description": "phonenumber_field.modelfields",
+        "detail": "phonenumber_field.modelfields",
+        "documentation": {}
+    },
+    {
+        "label": "PhoneNumberField",
+        "importPath": "phonenumber_field.modelfields",
+        "description": "phonenumber_field.modelfields",
+        "isExtraImport": true,
         "detail": "phonenumber_field.modelfields",
         "documentation": {}
     },
@@ -1160,19 +1272,27 @@
         "documentation": {}
     },
     {
-        "label": "format_html",
-        "importPath": "django.utils.html",
-        "description": "django.utils.html",
+        "label": "HTMLField",
+        "importPath": "tinymce.models",
+        "description": "tinymce.models",
         "isExtraImport": true,
-        "detail": "django.utils.html",
+        "detail": "tinymce.models",
         "documentation": {}
     },
     {
-        "label": "PositionAdmin",
-        "importPath": "apps.product.admin",
-        "description": "apps.product.admin",
+        "label": "Position",
+        "importPath": "apps.home.models",
+        "description": "apps.home.models",
         "isExtraImport": true,
-        "detail": "apps.product.admin",
+        "detail": "apps.home.models",
+        "documentation": {}
+    },
+    {
+        "label": "PositionSerializer",
+        "importPath": "apps.home.serializers",
+        "description": "apps.home.serializers",
+        "isExtraImport": true,
+        "detail": "apps.home.serializers",
         "documentation": {}
     },
     {
@@ -1303,6 +1423,15 @@
         "description": "rest_framework.pagination",
         "isExtraImport": true,
         "detail": "rest_framework.pagination",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
         "documentation": {}
     },
     {
@@ -1711,12 +1840,75 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.home.migrations.0001_initial",
+        "description": "apps.home.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Position',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('is_active', models.BooleanField(default=True)),",
+        "detail": "apps.home.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "PositionAdmin",
+        "kind": 6,
+        "importPath": "apps.home.admin",
+        "description": "apps.home.admin",
+        "peekOfCode": "class PositionAdmin(TranslatableAdmin):\n    list_display = ['name']\n    list_display_links = ['name']\n    search_fields = ['name']\n    list_per_page = 20\n    fieldsets = (\n        (None, {\n            'fields': ('name',)\n        }),\n    )",
+        "detail": "apps.home.admin",
+        "documentation": {}
+    },
+    {
         "label": "HomeConfig",
         "kind": 6,
         "importPath": "apps.home.apps",
         "description": "apps.home.apps",
-        "peekOfCode": "class HomeConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'home'",
+        "peekOfCode": "class HomeConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'apps.home'",
         "detail": "apps.home.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Position",
+        "kind": 6,
+        "importPath": "apps.home.models",
+        "description": "apps.home.models",
+        "peekOfCode": "class Position(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=255, verbose_name=_('Name')),\n    )\n    is_active = models.BooleanField(default=True)\n    def __str__(self):\n        return self.name\n    class Meta:\n        verbose_name = _(\"Nima bilan shug'ullanadi\")\n        verbose_name_plural = _('Pazitsiyalar')",
+        "detail": "apps.home.models",
+        "documentation": {}
+    },
+    {
+        "label": "PositionSerializer",
+        "kind": 6,
+        "importPath": "apps.home.serializers",
+        "description": "apps.home.serializers",
+        "peekOfCode": "class PositionSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Position)\n    class Meta:\n        model = Position\n        fields = '__all__'",
+        "detail": "apps.home.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "apps.home.urls",
+        "description": "apps.home.urls",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'position', PositionViewSet)\nurlpatterns = [\n    path('', include(router.urls))\n]",
+        "detail": "apps.home.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "apps.home.urls",
+        "description": "apps.home.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', include(router.urls))\n]",
+        "detail": "apps.home.urls",
+        "documentation": {}
+    },
+    {
+        "label": "PositionViewSet",
+        "kind": 6,
+        "importPath": "apps.home.views",
+        "description": "apps.home.views",
+        "peekOfCode": "class PositionViewSet(viewsets.ModelViewSet):\n    queryset = Position.objects.all()\n    serializer_class = PositionSerializer",
+        "detail": "apps.home.views",
         "documentation": {}
     },
     {
@@ -1724,26 +1916,8 @@
         "kind": 6,
         "importPath": "apps.product.migrations.0001_initial",
         "description": "apps.product.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Application',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('tariflar', models.CharField(blank=True, default='Рынок Узбекистана', max_length=100, null=True)),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('home', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Application',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
         "detail": "apps.product.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "apps.product.migrations.0002_rename_type_position_company_biznes",
-        "description": "apps.product.migrations.0002_rename_type_position_company_biznes",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0001_initial'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='company',\n            old_name='type_position',\n            new_name='biznes',\n        ),",
-        "detail": "apps.product.migrations.0002_rename_type_position_company_biznes",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "apps.product.migrations.0003_rename_biznes_company_type_position",
-        "description": "apps.product.migrations.0003_rename_biznes_company_type_position",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0002_rename_type_position_company_biznes'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='company',\n            old_name='biznes',\n            new_name='type_position',\n        ),",
-        "detail": "apps.product.migrations.0003_rename_biznes_company_type_position",
         "documentation": {}
     },
     {
@@ -1756,29 +1930,11 @@
         "documentation": {}
     },
     {
-        "label": "CompanyProductAdmin",
-        "kind": 6,
-        "importPath": "apps.product.admin",
-        "description": "apps.product.admin",
-        "peekOfCode": "class CompanyProductAdmin(admin.ModelAdmin):\n    list_display = ['company', 'product']\n    search_fields = ['company__name', 'product__name']\nclass CategoryAdmin(TranslatableAdmin):\n    list_display = ['name']\n    list_display_links = ['name',]\n    search_fields = ['name']\n    list_per_page = 20\n    fieldsets = (\n        (None, {",
-        "detail": "apps.product.admin",
-        "documentation": {}
-    },
-    {
         "label": "CategoryAdmin",
         "kind": 6,
         "importPath": "apps.product.admin",
         "description": "apps.product.admin",
         "peekOfCode": "class CategoryAdmin(TranslatableAdmin):\n    list_display = ['name']\n    list_display_links = ['name',]\n    search_fields = ['name']\n    list_per_page = 20\n    fieldsets = (\n        (None, {\n            'fields': ('name', 'image'),\n        }),\n    )",
-        "detail": "apps.product.admin",
-        "documentation": {}
-    },
-    {
-        "label": "PositionAdmin",
-        "kind": 6,
-        "importPath": "apps.product.admin",
-        "description": "apps.product.admin",
-        "peekOfCode": "class PositionAdmin(TranslatableAdmin):\n    list_display = ['name']\n    list_display_links = ['name']\n    search_fields = ['name']\n    list_per_page = 20\n    fieldsets = (\n        (None, {\n            'fields': ('name',)\n        }),\n    )",
         "detail": "apps.product.admin",
         "documentation": {}
     },
@@ -1805,7 +1961,7 @@
         "kind": 6,
         "importPath": "apps.product.admin",
         "description": "apps.product.admin",
-        "peekOfCode": "class CompanyAdmin(TranslatableAdmin):\n    list_display = ['name', 'type_product', 'country',  'short_description', 'created_at']\n    list_display_links = ['name']\n    search_fields = ['name', 'type_product__name']\n    list_per_page = 20\n    def view_location_button(self, obj):\n        return format_html('<a href=\"https://maps.google.com/?q={}\" target=\"_blank\">View Location</a>', obj.location)\n    view_location_button.short_description = 'View Location'\n    list_display = ['name', 'country', 'type_product', 'created_at', 'view_location_button']\n    fieldsets = (",
+        "peekOfCode": "class CompanyAdmin(TranslatableAdmin):\n    list_display = ['name', 'type_product', 'country', 'short_description', 'created_at', 'view_location_button']\n    list_display_links = ['name']\n    search_fields = ['name', 'type_product__name']\n    list_per_page = 20\n    def view_location_button(self, obj):\n        return format_html('<a href=\"https://maps.google.com/?q={}\" target=\"_blank\">View Location</a>', obj.location)\n    view_location_button.short_description = 'View Location'\n    fieldsets = (\n        (None, {",
         "detail": "apps.product.admin",
         "documentation": {}
     },
@@ -1823,7 +1979,7 @@
         "kind": 6,
         "importPath": "apps.product.admin",
         "description": "apps.product.admin",
-        "peekOfCode": "class ApplicationAdmin(admin.ModelAdmin):\n    list_display = ['name', 'phone_number', 'display_checked', 'date']\n    list_filter = ['checked']\n    search_fields = ['name', 'phone_number']\n    list_per_page = 50\n    readonly_fields = ['date']\n    def display_checked(self, obj):\n        if obj.checked:\n            return format_html('<span style=\"color: green;\"><b>&#10004;</b></span>')  # Checked icon\n        else:",
+        "peekOfCode": "class ApplicationAdmin(admin.ModelAdmin):\n    list_display = ['name', 'phone_number', 'display_checked', 'date', 'tarif']\n    list_filter = ['checked']\n    search_fields = ['name', 'phone_number']\n    list_per_page = 50\n    readonly_fields = ['date']\n    def display_checked(self, obj):\n        if obj.checked:\n            return format_html('<span style=\"color: green;\"><b>&#10004;</b></span>')  # Checked icon\n        else:",
         "detail": "apps.product.admin",
         "documentation": {}
     },
@@ -1873,20 +2029,11 @@
         "documentation": {}
     },
     {
-        "label": "Position",
-        "kind": 6,
-        "importPath": "apps.product.models",
-        "description": "apps.product.models",
-        "peekOfCode": "class Position(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=255, verbose_name=_('Name')),\n    )\n    is_active = models.BooleanField(default=True)\n    def __str__(self):\n        return self.name\n    class Meta:\n        verbose_name = _(\"Nima bilan shug'ullanadi\")\n        verbose_name_plural = _('Pazitsiyalar')",
-        "detail": "apps.product.models",
-        "documentation": {}
-    },
-    {
         "label": "Company",
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Company(TranslatableModel):\n    translations = TranslatedFields(\n        description=models.TextField(verbose_name=_('Description'), null=True, blank=True),\n        short_description=models.TextField(verbose_name=_('Short Description'), null=True, blank=True)\n    )\n    name = models.CharField(max_length=300, verbose_name=_('Nomi'))\n    type_position = models.ForeignKey(\n        Position,\n        on_delete=models.SET_NULL,\n        verbose_name=_('Pazitsiya turi'),",
+        "peekOfCode": "class Company(TranslatableModel):\n    translations = TranslatedFields(\n        description=models.TextField(verbose_name=_('Description'), null=True, blank=True),\n        short_description=models.TextField(verbose_name=_('Short Description'), null=True, blank=True, default=\"NEW\"),\n    )\n    name = models.CharField(max_length=300, verbose_name=_('Nomi'))\n    type_position = models.ForeignKey(\n        Position ,  # Replace with your actual Category model\n        on_delete=models.CASCADE,\n        verbose_name=_('Biznes turi turi')",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1931,7 +2078,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Application(models.Model):\n    tariflar = models.CharField(max_length=100, null=True , blank=True, default=\"Рынок Узбекистана\")\n    name = models.CharField(max_length=123, help_text=\"Nomi\")\n    location = models.CharField(max_length=255, help_text=\"davlatlar\")\n    phone_number = models.CharField(max_length=100, help_text=\"Telefon raqami\")\n    email = models.EmailField(max_length=254, null=True, blank=True, help_text=\"email uchun\", unique=False)\n    checked = models.BooleanField(default=False, help_text=\"Tekshirilganmi?\")\n    company_name = models.CharField(max_length=123, help_text=\"Kampaniya nomi\")\n    date = models.DateTimeField(auto_now_add=True, help_text=\"Sana\")\n    class Meta:",
+        "peekOfCode": "class Application(models.Model):\n    tarif = models.CharField(max_length=100, default=\"Рынок Узбекистана\", null=True, blank=True, verbose_name=\"Tarif\")\n    name = models.CharField(max_length=123, help_text=\"Nomi\", verbose_name=\"Name\")\n    location = models.CharField(max_length=255, help_text=\"Davlatlar\", verbose_name=\"Location\")\n    phone_number = models.CharField(max_length=100, help_text=\"Telefon raqami\", verbose_name=\"Phone Number\")\n    email = models.EmailField(max_length=254, null=True, blank=True, help_text=\"Email uchun\", verbose_name=\"Email\", unique=False)\n    checked = models.BooleanField(default=False, help_text=\"Tekshirilganmi?\", verbose_name=\"Checked\")\n    company_name = models.CharField(max_length=123, help_text=\"Kampaniya nomi\", verbose_name=\"Company Name\")\n    date = models.DateTimeField(auto_now_add=True, help_text=\"Sana\", verbose_name=\"Date\")\n    class Meta:",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1940,7 +2087,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Question(models.Model):\n    product_id = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)\n    name = models.CharField(max_length=123, help_text=\"Nomi\")\n    location = models.CharField(max_length=255, help_text=\"davlatlar\")\n    phone_number = models.CharField(max_length=100, help_text=\"Telefon raqami\")\n    email = models.EmailField(max_length=254, null=True, blank=True, help_text=\"email uchun\", unique=False)\n    checked = models.BooleanField(default=False, help_text=\"Tekshirilganmi?\")\n    text = models.TextField(help_text=\"Matn\")\n    date = models.DateTimeField(auto_now_add=True, help_text=\"Sana\")\n    class Meta:",
+        "peekOfCode": "class Question(models.Model):\n    product_id = models.ForeignKey('Product', on_delete=models.SET_NULL, null=True, blank=True, verbose_name=\"Product\")\n    name = models.CharField(max_length=123, help_text=\"Nomi\", verbose_name=\"Name\")\n    location = models.CharField(max_length=255, default='Uzbekistan', help_text=\"Davlatlar\", verbose_name=\"Location\")\n    phone_number = models.CharField(max_length=100, help_text=\"Telefon raqami\", verbose_name=\"Phone Number\")\n    email = models.EmailField(max_length=254, null=True, blank=True, help_text=\"Email uchun\", verbose_name=\"Email\", unique=False)\n    checked = models.BooleanField(default=False, help_text=\"Tekshirilganmi?\", verbose_name=\"Checked\")\n    text = models.TextField(help_text=\"Matn\", verbose_name=\"Text\")\n    date = models.DateTimeField(auto_now_add=True, help_text=\"Sana\", verbose_name=\"Date\")\n    class Meta:",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1949,16 +2096,7 @@
         "kind": 6,
         "importPath": "apps.product.serializers",
         "description": "apps.product.serializers",
-        "peekOfCode": "class SubCategorySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=SubCategory)\n    class Meta:\n        model = SubCategory\n        fields = '__all__'\nclass PositionSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Position)\n    class Meta:\n        model = Position\n        fields = '__all__'",
-        "detail": "apps.product.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "PositionSerializer",
-        "kind": 6,
-        "importPath": "apps.product.serializers",
-        "description": "apps.product.serializers",
-        "peekOfCode": "class PositionSerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Position)\n    class Meta:\n        model = Position\n        fields = '__all__'\nclass CategorySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Category)\n    subcategories = SubCategorySerializer(many=True, read_only=True)\n    class Meta:\n        model = Category",
+        "peekOfCode": "class SubCategorySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=SubCategory)\n    class Meta:\n        model = SubCategory\n        fields = '__all__'\nclass CategorySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Category)\n    subcategories = SubCategorySerializer(many=True, read_only=True)\n    class Meta:\n        model = Category",
         "detail": "apps.product.serializers",
         "documentation": {}
     },
@@ -2300,7 +2438,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'config.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\n# DATABASES = {\n#     'default': dj_database_url.parse(env('DATABASE_URL'))\n#     }\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.sqlite3',\n#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),",
+        "peekOfCode": "WSGI_APPLICATION = 'config.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\n# DATABASES = {\n#     'default': dj_database_url.parse(env('DATABASE_URL'))\n#     }\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2309,7 +2447,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': 'mydatabase',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),\n    }\n}\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.sqlite3',\n#         'NAME': 'mydatabase',",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2554,6 +2692,24 @@
         "description": "core.paginations",
         "peekOfCode": "DEFAULT_PAGE_SIZE = 10\nclass CustomPagination(PageNumberPagination):\n    page = DEFAULT_PAGE\n    page_size = DEFAULT_PAGE_SIZE\n    page_size_query_param = 'page_size'\n    def get_paginated_response(self, data):\n        return Response({\n            'links': {\n                'next': self.get_next_link(),\n                'previous': self.get_previous_link()",
         "detail": "core.paginations",
+        "documentation": {}
+    },
+    {
+        "label": "con",
+        "kind": 5,
+        "importPath": "keresiz",
+        "description": "keresiz",
+        "peekOfCode": "con = sqlite3.connect(\"mydatabase.db\")\ncur = con.cursor()",
+        "detail": "keresiz",
+        "documentation": {}
+    },
+    {
+        "label": "cur",
+        "kind": 5,
+        "importPath": "keresiz",
+        "description": "keresiz",
+        "peekOfCode": "cur = con.cursor()",
+        "detail": "keresiz",
         "documentation": {}
     },
     {

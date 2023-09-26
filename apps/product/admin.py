@@ -54,9 +54,8 @@ class ProductAdmin(TranslatableAdmin):
 
 admin.site.register(Product, ProductAdmin)
 
-
 class CompanyAdmin(TranslatableAdmin):
-    list_display = ['name', 'type_product', 'country',  'short_description', 'created_at']
+    list_display = ['name', 'type_product', 'country', 'short_description', 'created_at', 'view_location_button']
     list_display_links = ['name']
     search_fields = ['name', 'type_product__name']
     list_per_page = 20
@@ -66,11 +65,13 @@ class CompanyAdmin(TranslatableAdmin):
     
     view_location_button.short_description = 'View Location'
 
-    list_display = ['name', 'country', 'type_product', 'created_at', 'view_location_button']
-    
     fieldsets = (
         (None, {
-            'fields': ('name', 'type_product','type_position', 'image', 'country','phone_number','description', 'short_description', 'location')
+            'fields': ('name', 'type_product', 'image', 'country', 'phone_number', 'description', 'short_description', 'location', 'workers_amount')
+        }),
+         ('Key Company info', {
+            'fields': ('type_position', 'found_year'),
+            'classes': ('collapse',),
         }),
         ('Social Media Links', {
             'fields': ('facebook', 'instagram', 'telegram', 'youtube'),
