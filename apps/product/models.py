@@ -49,7 +49,7 @@ class Company(TranslatableModel):
     phone_number = PhoneNumberField(verbose_name=_('Phone number'))
     workers_amount = models.CharField(max_length=255, help_text='masalan 5-10 va 10 - 15')
     created_at = models.DateTimeField(auto_now_add=True)
-    found_year = models.DateField()
+    found_year = models.CharField(max_length=255, help_text='masalan 2019 va 2023 yani found date')
     facebook = models.URLField(verbose_name=_('Facebook URL'), blank=True)
     instagram = models.URLField(verbose_name=_('Instagram URL'), blank=True)
     telegram = models.URLField(verbose_name=_('Telegram URL'), blank=True)

@@ -52,6 +52,7 @@ class CompanySerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Company)
     products = serializers.SerializerMethodField()
     type_product = CategorySerializer(read_only=True)
+    type_position = PositionSerializer(read_only=True)
     
     class Meta:
         model = Company

@@ -745,6 +745,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -1921,6 +1937,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0002_alter_company_found_year",
+        "description": "apps.product.migrations.0002_alter_company_found_year",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='company',\n            name='found_year',\n            field=models.CharField(help_text='masalan 2019 va 2023 yani found date', max_length=255),\n        ),",
+        "detail": "apps.product.migrations.0002_alter_company_found_year",
+        "documentation": {}
+    },
+    {
         "label": "ProductRatingAdmin",
         "kind": 6,
         "importPath": "apps.product.admin",
@@ -2132,7 +2157,7 @@
         "kind": 6,
         "importPath": "apps.product.serializers",
         "description": "apps.product.serializers",
-        "peekOfCode": "class CompanySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Company)\n    products = serializers.SerializerMethodField()\n    type_product = CategorySerializer(read_only=True)\n    class Meta:\n        model = Company\n        fields = '__all__'\n    def get_products(self, instance):\n        products = Product.objects.filter(company=instance)\n        product_serializer = ProductSerializer(products, many=True)",
+        "peekOfCode": "class CompanySerializer(TranslatableModelSerializer):\n    translations = TranslatedFieldsField(shared_model=Company)\n    products = serializers.SerializerMethodField()\n    type_product = CategorySerializer(read_only=True)\n    type_position = PositionSerializer(read_only=True)\n    class Meta:\n        model = Company\n        fields = '__all__'\n    def get_products(self, instance):\n        products = Product.objects.filter(company=instance)",
         "detail": "apps.product.serializers",
         "documentation": {}
     },
@@ -2591,7 +2616,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "SPECTACULAR_SETTINGS = {\n    'COMPONENT_SPLIT_REQUEST': True,\n}\nPARLER_LANGUAGES = {\n    None: (\n        {'code': 'uz'},\n        {'code': 'en'},\n        {'code': 'ru'},\n    ),\n    'default': {",
+        "peekOfCode": "SPECTACULAR_SETTINGS = {\n    'COMPONENT_SPLIT_REQUEST': True,\n}\nPARLER_LANGUAGES = {\n    None: (\n        {'code': 'ru'},\n        {'code': 'en'},\n        {'code': 'uz'},\n    ),\n    'default': {",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -2600,7 +2625,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "PARLER_LANGUAGES = {\n    None: (\n        {'code': 'uz'},\n        {'code': 'en'},\n        {'code': 'ru'},\n    ),\n    'default': {\n        'fallbacks': ['uz', 'en', 'ru'],\n        'hide_untranslated': False,\n    }",
+        "peekOfCode": "PARLER_LANGUAGES = {\n    None: (\n        {'code': 'ru'},\n        {'code': 'en'},\n        {'code': 'uz'},\n    ),\n    'default': {\n        'fallbacks': ['ru', 'en', 'uz' ],\n        'hide_untranslated': False,\n    }",
         "detail": "config.settings",
         "documentation": {}
     },
