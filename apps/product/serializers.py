@@ -1,11 +1,10 @@
 from rest_framework import serializers
 from parler_rest.serializers import TranslatableModelSerializer
 from parler_rest.fields import TranslatedFieldsField
-from .models import Company, Product, ProductRating, Category, SubCategory, ProductImage, Application, Question
-# from apps.home.models import Position
+from .models import Company, Product, ProductRating, Category, SubCategory, ProductImage, Application, Question, Position
 from rest_framework import serializers
-from django.db.models import Avg , Sum, Count
-from apps.home.serializers import PositionSerializer
+from django.db.models import Avg
+
 
 class SubCategorySerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=SubCategory)
@@ -13,7 +12,6 @@ class SubCategorySerializer(TranslatableModelSerializer):
     class Meta:
         model = SubCategory
         fields = '__all__'
-
 
 
 class CategorySerializer(TranslatableModelSerializer):
@@ -42,11 +40,18 @@ class ProductSerializer(TranslatableModelSerializer):
     category = SubCategorySerializer(read_only=True)
     images = ProductImageSerializer(many=True, read_only=True)
 
-
     class Meta:
         model = Product
         fields = '__all__'
         
+
+class PositionSerializer(TranslatableModelSerializer):
+    translations = TranslatedFieldsField(shared_model=Position)
+    
+    class Meta:
+        model = Position
+        fields = '__all__'
+
 
 class CompanySerializer(TranslatableModelSerializer):
     translations = TranslatedFieldsField(shared_model=Company)
@@ -62,7 +67,6 @@ class CompanySerializer(TranslatableModelSerializer):
         products = Product.objects.filter(company=instance)
         product_serializer = ProductSerializer(products, many=True)
         return product_serializer.data
-
 
 
 class ProductRatingSerializer(serializers.ModelSerializer):
@@ -87,7 +91,6 @@ class ProductRetrieveSerializer(TranslatableModelSerializer):
         ratings = ProductRating.objects.filter(product=instance)
         avg_rating = ratings.aggregate(Avg('star'))['star__avg']
         return avg_rating
-
 
     class Meta:
         model = Product
@@ -130,16 +133,15 @@ class GetProductSerializer(TranslatableModelSerializer):
 
 class ApplicationSerializer(serializers.ModelSerializer):
     
-
     class Meta:
         model = Application
         fields = "__all__"
         
 
 class QuestionSerializer(serializers.ModelSerializer):
-    
 
     class Meta:
         model = Question
         fields = "__all__"
+        
         
