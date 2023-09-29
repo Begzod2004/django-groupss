@@ -107,8 +107,7 @@ class ApplicationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Application
-        fields = ['id', 'name', 'phone_number', 'lacation','campany_name', 'date',
-                  'checked']
+        fields = "__all__"
         
 
 class QuestionSerializer(serializers.ModelSerializer):
@@ -116,6 +115,5 @@ class QuestionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Question
-        fields = ['id', 'name', 'phone_number', 'lacation','text', 'date',
-                  'checked']
+        fields = "__all__"
         

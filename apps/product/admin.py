@@ -42,16 +42,15 @@ class ProductImageInline(admin.TabularInline):
 
 class ProductAdmin(TranslatableAdmin):
     inlines = [ProductImageInline]
-    list_display = ['name', 'created_at', 'is_featured', 'campany']
+    list_display = ['name', 'created_at',  'campany', 'short_description', 'is_featured']
     list_display_links = ['name']
     search_fields = ['name',  'tag']
     list_per_page = 20
-    list_filter = ['is_featured', 'category']
-    list_editable = ['is_featured']
+    list_filter = [ 'category', 'mode_in']
 
     fieldsets = (
         (None, {
-            'fields': ('name','description', 'tag', 'campany', 'category', 'is_featured', 'created_at', 'updated_at'),
+            'fields': ('name','mode_in','description', 'tag', 'campany', 'category',  'created_at', 'is_featured', 'updated_at', 'short_description'),
         },),
     )
 
@@ -61,7 +60,7 @@ from django.utils.html import format_html
 
 
 class CompanyAdmin(TranslatableAdmin):
-    list_display = ['name', 'type_product', 'country', 'created_at']
+    list_display = ['name', 'type_product', 'country',  'short_description', 'created_at']
     list_display_links = ['name']
     search_fields = ['name', 'type_product__name']
     list_per_page = 20
@@ -75,7 +74,7 @@ class CompanyAdmin(TranslatableAdmin):
     
     fieldsets = (
         (None, {
-            'fields': ('name', 'type_product', 'image', 'country','phone_number','description','location')
+            'fields': ('name', 'type_product', 'image', 'country','phone_number','description', 'short_description', 'location')
         }),
         ('Social Media Links', {
             'fields': ('facebook', 'instagram', 'telegram', 'youtube'),
