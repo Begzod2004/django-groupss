@@ -64,7 +64,7 @@ urlpatterns += [
     path('blog/', include('apps.blog.urls')),
     # path('order/', include('apps.order.api.urls')),
 
-    # path('home/', include('home.urls'))
+    path('home/', include('apps.home.urls'))
 ]
 
 if settings.DEBUG:

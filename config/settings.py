@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'parler',
 
     # local
-    # 'apps.home',
+    'apps.home',
     # 'apps.account',
     'apps.product',
     'apps.blog',
@@ -228,12 +228,12 @@ SPECTACULAR_SETTINGS = {
 
 PARLER_LANGUAGES = {
     None: (
-        {'code': 'uz'},
-        {'code': 'en'},
         {'code': 'ru'},
+        {'code': 'en'},
+        {'code': 'uz'},
     ),
     'default': {
-        'fallbacks': ['uz', 'en', 'ru'],
+        'fallbacks': ['ru', 'en', 'uz' ],
         'hide_untranslated': False,
     }
 }
