@@ -1442,15 +1442,6 @@
         "documentation": {}
     },
     {
-        "label": "sqlite3",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sqlite3",
-        "description": "sqlite3",
-        "detail": "sqlite3",
-        "documentation": {}
-    },
-    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -2717,24 +2708,6 @@
         "description": "core.paginations",
         "peekOfCode": "DEFAULT_PAGE_SIZE = 10\nclass CustomPagination(PageNumberPagination):\n    page = DEFAULT_PAGE\n    page_size = DEFAULT_PAGE_SIZE\n    page_size_query_param = 'page_size'\n    def get_paginated_response(self, data):\n        return Response({\n            'links': {\n                'next': self.get_next_link(),\n                'previous': self.get_previous_link()",
         "detail": "core.paginations",
-        "documentation": {}
-    },
-    {
-        "label": "con",
-        "kind": 5,
-        "importPath": "keresiz",
-        "description": "keresiz",
-        "peekOfCode": "con = sqlite3.connect(\"mydatabase.db\")\ncur = con.cursor()",
-        "detail": "keresiz",
-        "documentation": {}
-    },
-    {
-        "label": "cur",
-        "kind": 5,
-        "importPath": "keresiz",
-        "description": "keresiz",
-        "peekOfCode": "cur = con.cursor()",
-        "detail": "keresiz",
         "documentation": {}
     },
     {
