@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'parler',
 
     # local
-    'apps.home',
+    
     # 'apps.account',
     'apps.product',
     'apps.blog',
@@ -233,7 +233,7 @@ PARLER_LANGUAGES = {
         {'code': 'uz'},
     ),
     'default': {
-        'fallbacks': ['ru', 'en', 'uz' ],
+        'fallbacks': ['ru', 'en', 'uz'],
         'hide_untranslated': False,
     }
 }

@@ -12,6 +12,7 @@ router.register(r'subcategory', SubCategoryViewSet)
 router.register(r'position', PositionViewSet)
 router.register(r'applications', ApplicationViewSet)
 router.register(r'questions', QuestionViewSet)
+router.register(r'position', PositionViewSet)
 
 urlpatterns = [
     path('', include(router.urls))

@@ -1,9 +1,4 @@
-
-from django.views.decorators.csrf import csrf_exempt
-from requests import Response
 from rest_framework import viewsets, filters
-from rest_framework.response import Response
-
 from .serializers import CompanySerializer, ProductSerializer, ProductRatingSerializer, ProductRetrieveSerializer, SubCategorySerializer, ApplicationSerializer, QuestionSerializer, GetProductSerializer, PositionSerializer
 from .models import Company, Product, ProductRating, SubCategory, Application, Question , Position
 from .filters import ProductFilter
@@ -85,6 +80,10 @@ class ApplicationViewSet(viewsets.ModelViewSet):
 class QuestionViewSet(viewsets.ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
+
+class PositionViewSet(viewsets.ModelViewSet):
+    queryset = Position.objects.all()
+    serializer_class = PositionSerializer
 
 
 
