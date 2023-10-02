@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 from parler.models import TranslatableModel, TranslatedFields
-from tinymce.models import HTMLField
+from ckeditor.fields import RichTextField
 from .countries import Country
 
 
@@ -42,8 +42,10 @@ class Category(TranslatableModel):
 
 class Company(TranslatableModel):
     translations = TranslatedFields(
-        description=models.TextField(verbose_name=_('Description'), null=True, blank=True),
-        short_description=models.TextField(verbose_name=_('Short Description'), null=True, blank=True, default="NEW"),
+        description=RichTextField(null=True, blank=True),
+        short_description=RichTextField(null=True, blank=True, default="NEW"),
+        location = models.CharField(max_length=255, null=True, blank=True),
+
     )
     name = models.CharField(max_length=300, verbose_name=_('Nomi'))
     type_position = models.ForeignKey(
@@ -56,7 +58,6 @@ class Company(TranslatableModel):
         on_delete=models.CASCADE,
         verbose_name=_('Maxsulot turi')
     )
-    location = models.CharField(max_length=255, null=True, blank=True)
     country = models.CharField(max_length=2, choices=Country.choices)
     image = models.ImageField(upload_to='post_images', verbose_name=_('Rasm'))
     phone_number = PhoneNumberField(verbose_name=_('Phone number'))
@@ -94,9 +95,9 @@ class SubCategory(TranslatableModel):
 class Product(TranslatableModel):
     translations = TranslatedFields(
         name=models.CharField(max_length=300, verbose_name=_('Nomi')),
-        description = HTMLField(),
+        description = RichTextField(),
         tag = models.TextField(verbose_name=_('Tag')),
-        short_description = models.TextField(verbose_name=_('short_description'), null=True , blank=True , default="NEW")
+        short_description = RichTextField(null=True , blank=True , default="NEW")
 
     )
     mode_in = models.CharField(

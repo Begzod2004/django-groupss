@@ -657,6 +657,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -1080,11 +1096,20 @@
         "documentation": {}
     },
     {
-        "label": "HTMLField",
-        "importPath": "tinymce.models",
-        "description": "tinymce.models",
+        "label": "ckeditor.fields",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "tinymce.models",
+        "importPath": "ckeditor.fields",
+        "description": "ckeditor.fields",
+        "detail": "ckeditor.fields",
+        "documentation": {}
+    },
+    {
+        "label": "RichTextField",
+        "importPath": "ckeditor.fields",
+        "description": "ckeditor.fields",
+        "isExtraImport": true,
+        "detail": "ckeditor.fields",
         "documentation": {}
     },
     {
@@ -1624,6 +1649,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0002_remove_company_location_companytranslation_location_and_more",
+        "description": "apps.product.migrations.0002_remove_company_location_companytranslation_location_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0001_initial'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='company',\n            name='location',\n        ),\n        migrations.AddField(",
+        "detail": "apps.product.migrations.0002_remove_company_location_companytranslation_location_and_more",
+        "documentation": {}
+    },
+    {
         "label": "PositionAdmin",
         "kind": 6,
         "importPath": "apps.product.admin",
@@ -1754,7 +1788,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Company(TranslatableModel):\n    translations = TranslatedFields(\n        description=models.TextField(verbose_name=_('Description'), null=True, blank=True),\n        short_description=models.TextField(verbose_name=_('Short Description'), null=True, blank=True, default=\"NEW\"),\n    )\n    name = models.CharField(max_length=300, verbose_name=_('Nomi'))\n    type_position = models.ForeignKey(\n        Position ,  # Replace with your actual Category model\n        on_delete=models.CASCADE,\n        verbose_name=_('Biznes turi turi')",
+        "peekOfCode": "class Company(TranslatableModel):\n    translations = TranslatedFields(\n        description=RichTextField(null=True, blank=True),\n        short_description=RichTextField(null=True, blank=True, default=\"NEW\"),\n        location = models.CharField(max_length=255, null=True, blank=True),\n    )\n    name = models.CharField(max_length=300, verbose_name=_('Nomi'))\n    type_position = models.ForeignKey(\n        Position ,  # Replace with your actual Category model\n        on_delete=models.CASCADE,",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1772,7 +1806,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Product(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=300, verbose_name=_('Nomi')),\n        description = HTMLField(),\n        tag = models.TextField(verbose_name=_('Tag')),\n        short_description = models.TextField(verbose_name=_('short_description'), null=True , blank=True , default=\"NEW\")\n    )\n    mode_in = models.CharField(\n        max_length=2,\n        choices=Country.choices,",
+        "peekOfCode": "class Product(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=300, verbose_name=_('Nomi')),\n        description = RichTextField(),\n        tag = models.TextField(verbose_name=_('Tag')),\n        short_description = RichTextField(null=True , blank=True , default=\"NEW\")\n    )\n    mode_in = models.CharField(\n        max_length=2,\n        choices=Country.choices,",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -2367,6 +2401,42 @@
         "importPath": "config.settings",
         "description": "config.settings",
         "peekOfCode": "JAZZMIN_SETTINGS = {\n    \"topmenu_links\"\n    # title of the window (Will default to current_admin_site.site_title if absent or None)\n    \"site_title\": \"B2B\",\n    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)\n    \"site_header\": \"B2B Admin\",\n    # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)\n    \"site_brand\": \"B2B\",\n    # Logo to use for your site, must be present in static files, used for brand on top left\n    # \"site_logo\": \"img\\logo.png\",",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CKEDITOR_JQUERY_URL",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'\nCKEDITOR_UPLOAD_PATH = 'uploads/'\nCKEDITOR_IMAGE_BACKEND = 'pillow'\nCKEDITOR_CONFIGS = {\n    'default': {\n        'skin': 'moono',\n        # 'skin': 'office2013',\n        'toolbar_Basic': [\n            ['Source', '-', 'Bold', 'Italic']\n        ],",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CKEDITOR_UPLOAD_PATH",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "CKEDITOR_UPLOAD_PATH = 'uploads/'\nCKEDITOR_IMAGE_BACKEND = 'pillow'\nCKEDITOR_CONFIGS = {\n    'default': {\n        'skin': 'moono',\n        # 'skin': 'office2013',\n        'toolbar_Basic': [\n            ['Source', '-', 'Bold', 'Italic']\n        ],\n        'toolbar_YourCustomToolbarConfig': [",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CKEDITOR_IMAGE_BACKEND",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "CKEDITOR_IMAGE_BACKEND = 'pillow'\nCKEDITOR_CONFIGS = {\n    'default': {\n        'skin': 'moono',\n        # 'skin': 'office2013',\n        'toolbar_Basic': [\n            ['Source', '-', 'Bold', 'Italic']\n        ],\n        'toolbar_YourCustomToolbarConfig': [\n            {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CKEDITOR_CONFIGS",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "CKEDITOR_CONFIGS = {\n    'default': {\n        'skin': 'moono',\n        # 'skin': 'office2013',\n        'toolbar_Basic': [\n            ['Source', '-', 'Bold', 'Italic']\n        ],\n        'toolbar_YourCustomToolbarConfig': [\n            {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},\n            {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},",
         "detail": "config.settings",
         "documentation": {}
     },
