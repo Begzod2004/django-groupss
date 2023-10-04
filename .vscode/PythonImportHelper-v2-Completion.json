@@ -673,6 +673,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -1658,6 +1674,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apps.product.migrations.0003_alter_companytranslation_short_description_and_more",
+        "description": "apps.product.migrations.0003_alter_companytranslation_short_description_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0002_remove_company_location_companytranslation_location_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='companytranslation',\n            name='short_description',\n            field=models.CharField(blank=True, default='NEW', max_length=255, null=True),\n        ),",
+        "detail": "apps.product.migrations.0003_alter_companytranslation_short_description_and_more",
+        "documentation": {}
+    },
+    {
         "label": "PositionAdmin",
         "kind": 6,
         "importPath": "apps.product.admin",
@@ -1788,7 +1813,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Company(TranslatableModel):\n    translations = TranslatedFields(\n        description=RichTextField(null=True, blank=True),\n        short_description=RichTextField(null=True, blank=True, default=\"NEW\"),\n        location = models.CharField(max_length=255, null=True, blank=True),\n    )\n    name = models.CharField(max_length=300, verbose_name=_('Nomi'))\n    type_position = models.ForeignKey(\n        Position ,  # Replace with your actual Category model\n        on_delete=models.CASCADE,",
+        "peekOfCode": "class Company(TranslatableModel):\n    translations = TranslatedFields(\n        description=RichTextField(null=True, blank=True),\n        short_description=models.CharField(max_length=255, null=True, blank=True, default=\"NEW\"),\n        location = models.CharField(max_length=255, null=True, blank=True),\n    )\n    name = models.CharField(max_length=300, verbose_name=_('Nomi'))\n    type_position = models.ForeignKey(\n        Position ,  # Replace with your actual Category model\n        on_delete=models.CASCADE,",
         "detail": "apps.product.models",
         "documentation": {}
     },
@@ -1806,7 +1831,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Product(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=300, verbose_name=_('Nomi')),\n        description = RichTextField(),\n        tag = models.TextField(verbose_name=_('Tag')),\n        short_description = models.CharFiel(null=True , blank=True , default=\"NEW\")\n    )\n    mode_in = models.CharField(\n        max_length=2,\n        choices=Country.choices,",
+        "peekOfCode": "class Product(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=300, verbose_name=_('Nomi')),\n        description = RichTextField(),\n        tag = models.TextField(verbose_name=_('Tag')),\n        short_description = models.CharField(max_length=300, null=True , blank=True , default=\"NEW\")\n    )\n    mode_in = models.CharField(\n        max_length=2,\n        choices=Country.choices,",
         "detail": "apps.product.models",
         "documentation": {}
     },
