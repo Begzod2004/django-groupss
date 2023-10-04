@@ -43,7 +43,7 @@ class Category(TranslatableModel):
 class Company(TranslatableModel):
     translations = TranslatedFields(
         description=RichTextField(null=True, blank=True),
-        short_description=RichTextField(null=True, blank=True, default="NEW"),
+        short_description=models.CharField(max_length=255, null=True, blank=True, default="NEW"),
         location = models.CharField(max_length=255, null=True, blank=True),
 
     )
@@ -97,7 +97,7 @@ class Product(TranslatableModel):
         name=models.CharField(max_length=300, verbose_name=_('Nomi')),
         description = RichTextField(),
         tag = models.TextField(verbose_name=_('Tag')),
-        short_description = RichTextField(null=True , blank=True , default="NEW")
+        short_description = models.CharField(max_length=300, null=True , blank=True , default="NEW")
 
     )
     mode_in = models.CharField(
@@ -179,4 +179,3 @@ class Question(models.Model):
     def __str__(self):
         return self.name
     
-

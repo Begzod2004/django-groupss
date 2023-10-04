@@ -1806,7 +1806,7 @@
         "kind": 6,
         "importPath": "apps.product.models",
         "description": "apps.product.models",
-        "peekOfCode": "class Product(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=300, verbose_name=_('Nomi')),\n        description = RichTextField(),\n        tag = models.TextField(verbose_name=_('Tag')),\n        short_description = RichTextField(null=True , blank=True , default=\"NEW\")\n    )\n    mode_in = models.CharField(\n        max_length=2,\n        choices=Country.choices,",
+        "peekOfCode": "class Product(TranslatableModel):\n    translations = TranslatedFields(\n        name=models.CharField(max_length=300, verbose_name=_('Nomi')),\n        description = RichTextField(),\n        tag = models.TextField(verbose_name=_('Tag')),\n        short_description = models.CharFiel(null=True , blank=True , default=\"NEW\")\n    )\n    mode_in = models.CharField(\n        max_length=2,\n        choices=Country.choices,",
         "detail": "apps.product.models",
         "documentation": {}
     },
