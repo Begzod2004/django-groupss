@@ -1,37 +1,8 @@
 from django.contrib import admin
-from .models import Company, Category, Product, ProductRating, SubCategory, ProductImage , Application, Question , Position
+from .models import Category, Product, SubCategory, ProductImage, Order, OrderItem, ProductRating
+
 from parler.admin import TranslatableAdmin
 from django.utils.html import format_html
-
-
-class PositionAdmin(TranslatableAdmin):
-    list_display = ['name']
-    list_display_links = ['name']
-    search_fields = ['name']
-    list_per_page = 20
-    fieldsets = (
-        (None, {
-            'fields': ('name',)
-        }),
-    )
-
-admin.site.register(Position, PositionAdmin)
-
-
-@admin.register(ProductRating)
-class ProductRatingAdmin(admin.ModelAdmin):
-    list_display = ['name','product', 'star', 'review_date', 'email']
-    list_filter = ['star']
-    search_fields = ['product__name', 'email']
-    list_per_page = 20
-
-    fieldsets = (
-        (None, {
-            'fields': ('name','product', 'star', 'review_comment', 'review_date', 'email'),
-        }),
-    )
-    readonly_fields = ['review_date']
-
 
 class CategoryAdmin(TranslatableAdmin):
     list_display = ['name']
@@ -54,48 +25,37 @@ class ProductImageInline(admin.TabularInline):
 
 class ProductAdmin(TranslatableAdmin):
     inlines = [ProductImageInline]
-    list_display = ['name', 'created_at',  'company', 'short_description', 'is_featured']
+    list_display = ['name', 'created_at','short_description', 'is_featured']
     list_display_links = ['name']
-    search_fields = ['name',  'tag']
+    search_fields = ['name',  'tag'] 
     list_per_page = 20
-    list_filter = [ 'category', 'mode_in']
+    readonly_fields = ('created_at', 'updated_at',)
+
+
 
     fieldsets = (
         (None, {
-            'fields': ('name','mode_in','description', 'tag', 'company', 'category',  'created_at', 'is_featured', 'updated_at', 'short_description'),
+            'fields': ('name','description', 'tag', 'category',  'is_featured', 'short_description'),
         },),
     )
 
 admin.site.register(Product, ProductAdmin)
 
-class CompanyAdmin(TranslatableAdmin):
-    list_display = ['name', 'type_product', 'country', 'short_description', 'created_at', 'view_location_button']
-    list_display_links = ['name']
-    search_fields = ['name', 'type_product__name']
-    list_per_page = 20
 
-    def view_location_button(self, obj):
-        return format_html('<a href="https://maps.google.com/?q={}" target="_blank">View Location</a>', obj.location)
-    
-    view_location_button.short_description = 'View Location'
+
+@admin.register(ProductRating)
+class ProductRatingAdmin(admin.ModelAdmin):
+    list_display = ['name','product', 'star', 'review_date', 'email']
+    list_filter = ['star']
+    search_fields = ['product__name', 'email']
+    list_per_page = 20
 
     fieldsets = (
         (None, {
-            'fields': ('name', 'type_product', 'image', 'country', 'phone_number', 'description', 'short_description', 'location', 'workers_amount')
-        }),
-         ('Key Company info', {
-            'fields': ('type_position', 'found_year'),
-            'classes': ('collapse',),
-        }),
-        ('Social Media Links', {
-            'fields': ('facebook', 'instagram', 'telegram', 'youtube'),
-            'classes': ('collapse',),
+            'fields': ('name','product', 'star', 'review_comment', 'review_date', 'email'),
         }),
     )
-    
-    readonly_fields = ['created_at']
-
-admin.site.register(Company, CompanyAdmin)
+    readonly_fields = ['review_date']
 
 
 class SubCategoryAdmin(TranslatableAdmin):
@@ -114,63 +74,28 @@ class SubCategoryAdmin(TranslatableAdmin):
 admin.site.register(SubCategory, SubCategoryAdmin)
 
 
-class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ['name', 'phone_number', 'display_checked', 'date', 'tarif']
-    list_filter = ['checked']
-    search_fields = ['name', 'phone_number']
-    list_per_page = 50
-    readonly_fields = ['date']
-
-    def display_checked(self, obj):
-        if obj.checked:
-            return format_html('<span style="color: green;"><b>&#10004;</b></span>')  # Checked icon
-        else:
-            return format_html('<span style="color: red;"><b>&#10008;</b></span>')  # X icon
-
-    display_checked.short_description = 'Checked'
 
 
-admin.site.register(Application, ApplicationAdmin)
+class OrderItemInline(admin.TabularInline):
+    model = OrderItem
+    extra = 0  # Qo'shimcha bo'sh bandlar soni
+    fields = ['product', 'quantity']
+    readonly_fields = ['product', 'quantity']
+    can_delete = False
 
+    def has_add_permission(self, request, obj=None):
+        return False
 
-class QuestionAdmin(admin.ModelAdmin):
-    list_display = ['name', 'phone_number', 'display_checked', 'date']
-    list_filter = ['checked']
-    search_fields = ['name', 'phone_number', 'campany_name']
-    list_per_page = 50
-    readonly_fields = ['date']
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ['__str__', 'user', 'phone_number', 'created_at', 'is_processed']
+    list_filter = ['is_processed', 'created_at']
+    search_fields = ['user__username', 'phone_number']
+    inlines = [OrderItemInline]
 
-    def display_checked(self, obj):
-        if obj.checked:
-            return format_html('<span style="color: green;"><b>&#10004;</b></span>')  # Checked icon
-        else:
-            return format_html('<span style="color: red;"><b>&#10008;</b></span>')  # X icon
+    def has_add_permission(self, request):
+        return False
 
-    display_checked.short_description = 'Checked'
+    def has_delete_permission(self, request, obj=None):
+        return False
 
-
-admin.site.register(Question, QuestionAdmin)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+admin.site.register(Order, OrderAdmin)
